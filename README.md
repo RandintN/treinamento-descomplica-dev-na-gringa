@@ -22,7 +22,7 @@ A página apresenta a proposta da mentoria, benefícios, FAQ, termos e links par
 ## Link Oficial
 Acesse a página da mentoria e mais detalhes em:
 
-https://robsoncassiano.software/descomplica-dev-na-gringa-hotmart
+https://treinamento.robsoncassiano.software
 
 ## Licença
 Consulte o arquivo `LICENSE.txt` para detalhes da licença.
