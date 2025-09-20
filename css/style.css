@@ -124,7 +124,61 @@ html {
   transform: translateX(0);
 }
 
-/* Evita FOUC: esconde o body até o JS remover a classe */
-body.fouc-hidden {
-  visibility: hidden;
+/* Utilidades críticas de fallback para evitar FOUC sem ocultar conteúdo */
+.antialiased { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+/* Layout container e centragem */
+.container { width: 100%; max-width: 1200px; margin-left: auto; margin-right: auto; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+
+/* Espaçamentos principais */
+.px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+.py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+.py-16 { padding-top: 4rem; padding-bottom: 4rem; }
+.py-20 { padding-top: 5rem; padding-bottom: 5rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-8 { margin-bottom: 2rem; }
+
+/* Tipografia essencial */
+.text-center { text-align: center; }
+.text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+.text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+.text-2xl { font-size: 1.5rem; line-height: 2rem; }
+.font-bold { font-weight: 700; }
+.font-medium { font-weight: 500; }
+.text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+
+/* Flex e alinhamento */
+.flex { display: flex; }
+.hidden { display: none; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.gap-2 { gap: 0.5rem; }
+.gap-12 { gap: 3rem; }
+
+/* Espaçamento horizontal entre itens (para navegação) */
+.space-x-8 > :not([hidden]) ~ :not([hidden]) { margin-left: 2rem; }
+
+/* Header: posição e sombra */
+.sticky { position: sticky; }
+.top-0 { top: 0; }
+.z-50 { z-index: 50; }
+.shadow-sm { box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+
+/* Efeitos visuais do header */
+.bg-white\/80 { background-color: rgba(255,255,255,0.8); }
+.backdrop-blur-md { -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
+
+/* Grid simples (fallback) */
+.grid { display: grid; }
+.gap-8 { gap: 2rem; }
+
+/* Responsividade mínima */
+@media (min-width: 768px) {
+  .md\:flex { display: flex; }
+  .md\:hidden { display: none; }
+  .md\:py-24 { padding-top: 6rem; padding-bottom: 6rem; }
+  .md\:py-32 { padding-top: 8rem; padding-bottom: 8rem; }
+  .md\:text-6xl { font-size: 3.75rem; line-height: 1; }
+  .md\:text-2xl { font-size: 1.5rem; line-height: 2rem; }
 }
