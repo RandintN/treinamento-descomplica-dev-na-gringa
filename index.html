@@ -4,6 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/site.webmanifest">
+  <link rel="shortcut icon" href="img/favicon/favicon.ico">
+  <meta name="theme-color" content="#00639B">
+
   <!-- SEO Meta Tags -->
   <title>Descomplica DEV Na Gringa | Sua Carreira Internacional Começa Aqui</title>
   <meta name="description" content="Cansado de se sentir desvalorizado no mercado BR? Existe um método testado e validado para DEVs seniores como você conquistarem vagas em dólar ou euro.">
@@ -34,134 +42,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Styles -->
-  <style>
-    /* Tema inspirado no Material 3 */
-    :root {
-      --md-sys-color-primary: #00639B;
-      --md-sys-color-on-primary: #FFFFFF;
-      --md-sys-color-primary-container: #CFE5FF;
-      --md-sys-color-on-primary-container: #001D33;
-      --md-sys-color-secondary: #51606F;
-      --md-sys-color-on-secondary: #FFFFFF;
-      --md-sys-color-secondary-container: #D4E4F6;
-      --md-sys-color-on-secondary-container: #0D1D2A;
-      --md-sys-color-tertiary: #67587A;
-      --md-sys-color-on-tertiary: #FFFFFF;
-      --md-sys-color-tertiary-container: #EBDDFF;
-      --md-sys-color-on-tertiary-container: #221534;
-      --md-sys-color-error: #BA1A1A;
-      --md-sys-color-on-error: #FFFFFF;
-      --md-sys-color-error-container: #FFDAD6;
-      --md-sys-color-on-error-container: #410002;
-      --md-sys-color-background: #FCFCFF;
-      --md-sys-color-on-background: #1A1C1E;
-      --md-sys-color-surface: #FCFCFF;
-      --md-sys-color-on-surface: #1A1C1E;
-      --md-sys-color-surface-variant: #DEE3EB;
-      --md-sys-color-on-surface-variant: #42474E;
-      --md-sys-color-outline: #72777F;
-      --md-sys-color-shadow: #000000;
-    }
-
-    body {
-      font-family: 'Roboto', sans-serif;
-      background-color: var(--md-sys-color-background);
-      color: var(--md-sys-color-on-background);
-      line-height: 1.6;
-    }
-
-    /* Classes de utilidade inspiradas no Material 3 */
-    .btn {
-      padding: 0.75rem 1.5rem;
-      border-radius: 999px; /* Pill shape */
-      font-weight: 500;
-      text-transform: none;
-      transition: all 0.3s ease;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      border: none;
-      cursor: pointer;
-    }
-
-    .btn-primary {
-      background-color: var(--md-sys-color-primary);
-      color: var(--md-sys-color-on-primary);
-    }
-
-    .btn-primary:hover {
-      box-shadow: 0 2px 10px -2px var(--md-sys-color-primary);
-      filter: brightness(1.1);
-    }
-
-    .btn-secondary {
-      background-color: var(--md-sys-color-secondary-container);
-      color: var(--md-sys-color-on-secondary-container);
-    }
-
-    .btn-secondary:hover {
-      filter: brightness(0.95);
-    }
-
-    .card {
-      background-color: var(--md-sys-color-surface-variant);
-      color: var(--md-sys-color-on-surface-variant);
-      border-radius: 1rem; /* Bordas mais arredondadas */
-      padding: 2rem;
-      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 15px -3px rgba(0,0,0,0.07), 0 4px 6px -2px rgba(0,0,0,0.04);
-    }
-
-    .section-title {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--md-sys-color-primary);
-      margin-bottom: 1rem;
-      line-height: 1.2;
-    }
-
-    .section-subtitle {
-      font-size: 1.25rem;
-      color: var(--md-sys-color-on-surface-variant);
-      margin-bottom: 3rem;
-    }
-
-    .nav-link {
-      transition: color 0.3s ease;
-      color: var(--md-sys-color-on-surface);
-    }
-
-    .nav-link:hover {
-      color: var(--md-sys-color-primary);
-    }
-
-    .logo-text {
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      color: var(--md-sys-color-secondary);
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    /* Estilização para o menu mobile */
-    #mobile-menu {
-      transform: translateX(100%);
-      transition: transform 0.3s ease-in-out;
-    }
-
-    #mobile-menu.open {
-      transform: translateX(0);
-    }
-
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 
   <!-- Schema.org markup for Google -->
   <script type="application/ld+json">
@@ -265,7 +146,7 @@
         <div class="card" style="background-color: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container)">
           <span class="material-icons text-4xl mb-4" style="color: var(--md-sys-color-secondary);">school</span>
           <h3 class="text-2xl font-bold mb-2">Domine a Entrevista Técnica</h3>
-          <p>Você vai aprender o inglês que importa: o estratégico para negociar, defender suas ideias no desafio técnico e gerar confiança. Além de um plano de estudos focado no que as empresas realmente cobram.</p>
+          <p>Você vai aprender o inglês que importa com um professor certificado (CELTA). É o inglês estratégico para negociar, defender suas ideias no desafio técnico e gerar confiança, alinhado a um plano de estudos focado no que as empresas realmente cobram.</p>
         </div>
         <div class="card" style="background-color: var(--md-sys-color-tertiary-container); color: var(--md-sys-color-on-tertiary-container)">
           <span class="material-icons text-4xl mb-4" style="color: var(--md-sys-color-tertiary);">work</span>
@@ -287,12 +168,13 @@
           <h2 class="section-title">Seu mentor já esteve no seu lugar.</h2>
           <h3 class="text-2xl font-medium mb-4" style="color: var(--md-sys-color-primary);">Meu nome é Robson Cassiano.</h3>
           <p class="mb-4">Eu não sou um guru de palco. Sou um DEV Sênior que, assim como você, se cansou do mercado brasileiro. Decidi que meu código valia mais e fui atrás das vagas internacionais. Consegui.</p>
-          <p class="mb-4">Passei pelo BTG Pactual, atendi clientes na Alemanha, Holanda e EUA, e fundei minha própria empresa, a Simple Software. Hoje, eu vivo a realidade de faturar em dólar e euro.</p>
+          <p class="mb-4">Passei pelo BTG Pactual, atendi clientes na Alemanha, Holanda e EUA, e fundei minha própria empresa, a Simple Software. Além da minha bagagem como DEV, sou professor de inglês com certificação internacional CELTA (Cambridge). Hoje, eu vivo a realidade de faturar em dólar e euro.</p>
           <p class="font-bold">Eu gravei minhas entrevistas, analisei cada uma delas e compilei cada erro, acerto e estratégia nesse método. Vou te entregar o mapa que eu gostaria de ter recebido, sem atalhos falsos, só o caminho que funciona.</p>
           <div class="mt-6 flex flex-wrap gap-4">
             <span class="py-2 px-4 rounded-full font-medium" style="background-color: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container);">DEV desde 2018</span>
             <span class="py-2 px-4 rounded-full font-medium" style="background-color: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container);">Ex-BTG Pactual</span>
             <span class="py-2 px-4 rounded-full font-medium" style="background-color: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container);">Founder Simple Software</span>
+            <span class="py-2 px-4 rounded-full font-medium" style="background-color: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container);">Professor com CELTA</span>
           </div>
         </div>
       </div>
@@ -326,7 +208,7 @@
         </div>
         <div class="card">
           <h3 class="text-xl font-bold mb-2">Meu inglês não é perfeito. E agora?</h3>
-          <p>Você não precisa ser fluente, precisa ser estratégico. O foco é te dar a confiança e o vocabulário para se comunicar bem nas entrevistas. Para ter uma ideia, veja minhas entrevistas reais no Youtube e compare seu nível com o meu.</p>
+          <p>Você não precisa ser fluente, precisa ser estratégico. O foco é te dar a confiança e o vocabulário para se comunicar bem nas entrevistas, com a orientação de um DEV Sênior que também é professor de inglês com certificação CELTA de Cambridge. Para ter uma ideia do nível necessário, veja minhas entrevistas reais no Youtube.</p>
         </div>
         <div class="card">
           <h3 class="text-xl font-bold mb-2">Terei resultados garantidos?</h3>
@@ -373,27 +255,7 @@
   </div>
 </footer>
 
-<script>
-  // Lógica para o menu mobile
-  const mobileMenuButton = document.getElementById('mobile-menu-button');
-  const closeMobileMenuButton = document.getElementById('close-mobile-menu');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-
-  mobileMenuButton.addEventListener('click', () => {
-    mobileMenu.classList.add('open');
-  });
-
-  closeMobileMenuButton.addEventListener('click', () => {
-    mobileMenu.classList.remove('open');
-  });
-
-  mobileNavLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.remove('open');
-    });
-  });
-</script>
+<script src="js/main.js"></script>
 
 </body>
 </html>
