@@ -123,3 +123,8 @@ html {
 #mobile-menu.open {
   transform: translateX(0);
 }
+
+/* Evita FOUC: esconde o body até o JS remover a classe */
+body.fouc-hidden {
+  visibility: hidden;
+}
