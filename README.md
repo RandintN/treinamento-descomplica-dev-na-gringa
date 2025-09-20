@@ -1,5 +1,10 @@
 # Descomplica DEV Na Gringa — Landing Page
 
+Adquira clareza e previsibilidade com os processos internacionais que pagam em dólar 👉 https://robsoncassiano.software/descomplica-dev-na-gringa-hotmart
+
+P.S. Método baseado em dados, evidências e provas. Tudo real, auditável e replicável.
+
+_______
 Este repositório contém uma landing page estática para a mentoria "Descomplica DEV Na Gringa".
 
 - Site/Oferta: https://robsoncassiano.software/descomplica-dev-na-gringa-hotmart
