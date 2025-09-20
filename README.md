@@ -26,3 +26,5 @@ https://treinamento.robsoncassiano.software
 
 ## Licença
 Consulte o arquivo `LICENSE.txt` para detalhes da licença.
+
+Vida Longa e Próspera 🖖🏻
