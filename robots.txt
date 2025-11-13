@@ -4,4 +4,11 @@
 # Allow all crawlers to access the site
 User-agent: *
 Allow: /
-Disallow:
+
+# Explicitly disallow admin or build folders if they ever appear (defensive)
+Disallow: /admin/
+Disallow: /build/
+
+# Hints for crawlers
+Sitemap: https://treinamento.robsoncassiano.software/sitemap.xml
+Host: treinamento.robsoncassiano.software

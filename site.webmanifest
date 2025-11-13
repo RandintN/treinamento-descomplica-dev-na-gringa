@@ -2,6 +2,7 @@
   "name": "Descomplica DEV Na Gringa",
   "short_name": "DEV Na Gringa",
   "description": "Mentoria para DEVs seniores conquistarem vagas internacionais e faturarem em dólar ou euro.",
+  "id": "/",
   "icons": [
     { "src": "img/favicon/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
     { "src": "img/favicon/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" }
@@ -11,5 +12,8 @@
   "display": "standalone",
   "orientation": "portrait",
   "theme_color": "#00639B",
-  "background_color": "#FCFCFF"
+  "background_color": "#FCFCFF",
+  "categories": ["education", "business", "productivity"],
+  "dir": "ltr",
+  "lang": "pt-BR"
 }
