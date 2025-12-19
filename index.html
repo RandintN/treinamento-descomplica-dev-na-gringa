@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,8 +15,10 @@
 
   <!-- SEO Meta Tags -->
   <title>Descomplica DEV Na Gringa | Sua Carreira Internacional Começa Aqui</title>
-  <meta name="description" content="Cansado de se sentir desvalorizado no mercado BR? Existe um método testado e validado para DEVs seniores como você conquistarem vagas em dólar ou euro.">
-  <meta name="keywords" content="dev internacional, trabalho remoto, vagas para programadores, carreira no exterior, ganhar em dólar, mentoria de carreira, robson cassiano">
+  <meta name="description"
+    content="Cansado de se sentir desvalorizado no mercado BR? Existe um método testado e validado para DEVs seniores como você conquistarem vagas em dólar ou euro.">
+  <meta name="keywords"
+    content="dev internacional, trabalho remoto, vagas para programadores, carreira no exterior, ganhar em dólar, mentoria de carreira, robson cassiano">
   <meta name="author" content="Robson Cassiano">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <meta name="referrer" content="no-referrer-when-downgrade">
@@ -27,7 +30,8 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://treinamento.robsoncassiano.software/">
   <meta property="og:title" content="Descomplica DEV Na Gringa | Sua Carreira Internacional Começa Aqui">
-  <meta property="og:description" content="Cansado de se sentir desvalorizado no mercado BR? Existe um método para DEVs seniores como você conquistarem vagas em dólar ou euro.">
+  <meta property="og:description"
+    content="Cansado de se sentir desvalorizado no mercado BR? Existe um método para DEVs seniores como você conquistarem vagas em dólar ou euro.">
   <meta property="og:site_name" content="Descomplica DEV Na Gringa">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:image" content="https://treinamento.robsoncassiano.software/img/Robson-Cassiano-1.webp">
@@ -36,7 +40,8 @@
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://treinamento.robsoncassiano.software/">
   <meta property="twitter:title" content="Descomplica DEV Na Gringa | Sua Carreira Internacional Começa Aqui">
-  <meta property="twitter:description" content="Cansado de se sentir desvalorizado no mercado BR? Existe um método para DEVs seniores como você conquistarem vagas em dólar ou euro.">
+  <meta property="twitter:description"
+    content="Cansado de se sentir desvalorizado no mercado BR? Existe um método para DEVs seniores como você conquistarem vagas em dólar ou euro.">
   <meta property="twitter:image" content="https://treinamento.robsoncassiano.software/img/Robson-Cassiano-1.webp">
 
   <!-- Fonts -->
@@ -47,8 +52,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <!-- Defer Material Icons to avoid render-blocking -->
   <link rel="preload" as="style" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"></noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" media="print"
+    onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </noscript>
 
   <!-- Scripts -->
   <script src="https://cdn.tailwindcss.com" defer></script>
@@ -103,195 +111,268 @@
     }
   </script>
 </head>
+
 <body class="antialiased">
 
-<!-- Cabeçalho -->
-<header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
-  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-    <div class="flex items-center gap-2">
-      <span class="material-icons text-primary" style="font-size: 32px; color: var(--md-sys-color-primary);">code</span>
-      <span class="text-xl logo-text">SIMPLE SOFTWARE</span>
+  <!-- Cabeçalho -->
+  <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-2">
+        <span class="material-icons text-primary"
+          style="font-size: 32px; color: var(--md-sys-color-primary);">code</span>
+        <span class="text-xl logo-text">SIMPLE SOFTWARE</span>
+      </div>
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="#home" class="nav-link font-medium">Início</a>
+        <a href="#mentoria" class="nav-link font-medium">O Método</a>
+        <a href="#mentor" class="nav-link font-medium">Seu Mentor</a>
+        <a href="#faq" class="nav-link font-medium">Dúvidas</a>
+        <a href="#termos" class="nav-link font-medium">Termos</a>
+      </nav>
+      <div class="md:hidden">
+        <button id="mobile-menu-button" class="text-gray-700 focus:outline-none" aria-label="Abrir menu">
+          <span class="material-icons">menu</span>
+        </button>
+      </div>
     </div>
-    <nav class="hidden md:flex items-center space-x-8">
-      <a href="#home" class="nav-link font-medium">Início</a>
-      <a href="#mentoria" class="nav-link font-medium">O Método</a>
-      <a href="#mentor" class="nav-link font-medium">Seu Mentor</a>
-      <a href="#faq" class="nav-link font-medium">Dúvidas</a>
-      <a href="#termos" class="nav-link font-medium">Termos</a>
-    </nav>
-    <div class="md:hidden">
-      <button id="mobile-menu-button" class="text-gray-700 focus:outline-none" aria-label="Abrir menu">
-        <span class="material-icons">menu</span>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 p-6 md:hidden">
+    <div class="flex justify-end mb-8">
+      <button id="close-mobile-menu" class="text-gray-700 focus:outline-none" aria-label="Fechar menu">
+        <span class="material-icons">close</span>
       </button>
     </div>
+    <nav class="flex flex-col space-y-6 text-center">
+      <a href="#home" class="nav-link font-medium text-lg mobile-nav-link">Início</a>
+      <a href="#mentoria" class="nav-link font-medium text-lg mobile-nav-link">O Método</a>
+      <a href="#mentor" class="nav-link font-medium text-lg mobile-nav-link">Seu Mentor</a>
+      <a href="#faq" class="nav-link font-medium text-lg mobile-nav-link">Dúvidas</a>
+      <a href="#termos" class="nav-link font-medium text-lg mobile-nav-link">Termos</a>
+    </nav>
   </div>
-</header>
 
-<!-- Mobile Menu -->
-<div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 p-6 md:hidden">
-  <div class="flex justify-end mb-8">
-    <button id="close-mobile-menu" class="text-gray-700 focus:outline-none" aria-label="Fechar menu">
-      <span class="material-icons">close</span>
-    </button>
-  </div>
-  <nav class="flex flex-col space-y-6 text-center">
-    <a href="#home" class="nav-link font-medium text-lg mobile-nav-link">Início</a>
-    <a href="#mentoria" class="nav-link font-medium text-lg mobile-nav-link">O Método</a>
-    <a href="#mentor" class="nav-link font-medium text-lg mobile-nav-link">Seu Mentor</a>
-    <a href="#faq" class="nav-link font-medium text-lg mobile-nav-link">Dúvidas</a>
-    <a href="#termos" class="nav-link font-medium text-lg mobile-nav-link">Termos</a>
-  </nav>
-</div>
-
-<main>
-  <!-- Seção Hero -->
-  <section id="home" class="py-20 md:py-32" style="background-color: var(--md-sys-color-primary-container);">
-    <div class="container mx-auto px-6 text-center">
-      <h1 class="text-4xl md:text-6xl font-bold mb-4" style="color: var(--md-sys-color-on-primary-container);">Descomplica DEV Na Gringa</h1>
-      <p class="text-xl md:text-2xl mb-8" style="color: var(--md-sys-color-on-secondary-container);">O método validado em entrevistas reais para DEVs seniores conquistarem vagas em dólar ou euro, sem depender da sorte.</p>
-      <a href="https://pay.hotmart.com/G101388470S" target="_blank" class="btn btn-primary text-lg">Sim, quero o passo a passo para minha vaga internacional</a>
-    </div>
-  </section>
-
-  <!-- Seção de Introdução -->
-  <section class="py-16 md:py-24">
-    <div class="container mx-auto px-6 text-center max-w-4xl">
-      <h2 class="section-title">Seu código vale mais lá fora. Você sabe disso.</h2>
-      <p class="section-subtitle">Enquanto você entrega projetos complexos no Brasil, outros DEVs (muitas vezes com menos conhecimento que você) estão fechando contratos de 5, 8, até 10 mil dólares por mês.</p>
-      <div class="card text-left">
-        <p class="text-lg">A diferença não está na sua capacidade técnica. <strong>Está em se preparar para os cenários previsíveis, que já documentei.</strong></p>
-        <p class="mt-4 text-lg">Se você está cansado de ver seu talento limitado pelo teto do mercado nacional, a hora de virar o jogo é agora. Eu vou te mostrar o caminho exato — baseado nas minhas próprias entrevistas gravadas — do primeiro ajuste no seu LinkedIn até a assinatura do contrato, para que você seja a escolha óbvia para as empresas gringas.</p>
+  <main>
+    <!-- Seção Hero -->
+    <section id="home" class="py-20 md:py-32" style="background-color: var(--md-sys-color-primary-container);">
+      <div class="container mx-auto px-6 text-center">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4" style="color: var(--md-sys-color-on-primary-container);">
+          Descomplica DEV Na Gringa</h1>
+        <p class="text-xl md:text-2xl mb-8" style="color: var(--md-sys-color-on-secondary-container);">O método validado
+          em entrevistas reais para DEVs seniores conquistarem vagas em dólar ou euro, sem depender da sorte.</p>
+        <a href="https://pay.hotmart.com/G101388470S" target="_blank" class="btn btn-primary text-lg">Sim, quero o passo
+          a passo para minha vaga internacional</a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Por dentro da Mentoria -->
-  <section id="mentoria" class="py-16 md:py-24" style="background-color: var(--md-sys-color-surface-variant);">
-    <div class="container mx-auto px-6">
-      <div class="text-center max-w-4xl mx-auto">
-        <h2 class="section-title">O Caminho Completo Para Sua Vaga na Gringa</h2>
-        <p class="section-subtitle">Não é um curso teórico. É um plano de ação prático para transformar sua experiência em um contrato internacional.</p>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="card" style="background-color: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container)">
-          <span class="material-icons text-4xl mb-4" style="color: var(--md-sys-color-primary);">campaign</span>
-          <h3 class="text-2xl font-bold mb-2">Seja o Candidato Óbvio</h3>
-          <p>Vamos construir um posicionamento tão forte que os recrutadores virão até você. Você terá um LinkedIn magnético, um portfólio que vende seu trabalho e uma marca pessoal de especialista internacional.</p>
-        </div>
-        <div class="card" style="background-color: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container)">
-          <span class="material-icons text-4xl mb-4" style="color: var(--md-sys-color-secondary);">school</span>
-          <h3 class="text-2xl font-bold mb-2">Domine a Entrevista Técnica</h3>
-          <p>Você vai aprender o inglês que importa com um professor certificado (CELTA). É o inglês estratégico para negociar, defender suas ideias no desafio técnico e gerar confiança, alinhado a um plano de estudos focado no que as empresas realmente cobram.</p>
-        </div>
-        <div class="card" style="background-color: var(--md-sys-color-tertiary-container); color: var(--md-sys-color-on-tertiary-container)">
-          <span class="material-icons text-4xl mb-4" style="color: var(--md-sys-color-tertiary);">work</span>
-          <h3 class="text-2xl font-bold mb-2">Receba o "Sim" na Proposta</h3>
-          <p>Com currículo no padrão global e treinos de entrevista baseados em cenários reais das minhas próprias gravações, você chegará em cada conversa sabendo exatamente o que falar. Da abordagem inicial até a negociação final do seu salário em moeda forte.</p>
+    <!-- Seção de Introdução -->
+    <section class="py-16 md:py-24">
+      <div class="container mx-auto px-6 text-center max-w-4xl">
+        <h2 class="section-title">Seu código vale mais lá fora. Você sabe disso.</h2>
+        <p class="section-subtitle">Enquanto você entrega projetos complexos no Brasil, outros DEVs (muitas vezes com
+          menos conhecimento que você) estão fechando contratos de 5, 8, até 10 mil dólares por mês.</p>
+        <div class="card text-left">
+          <p class="text-lg">A diferença não está na sua capacidade técnica. <strong>Está em se preparar para os
+              cenários previsíveis, que já documentei.</strong></p>
+          <p class="mt-4 text-lg">Se você está cansado de ver seu talento limitado pelo teto do mercado nacional, a hora
+            de virar o jogo é agora. Eu vou te mostrar o caminho exato — baseado nas minhas próprias entrevistas
+            gravadas — do primeiro ajuste no seu LinkedIn até a assinatura do contrato, para que você seja a escolha
+            óbvia para as empresas gringas.</p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Quem é o mentor -->
-  <section id="mentor" class="py-16 md:py-24">
-    <div class="container mx-auto px-6">
-      <div class="flex flex-col md:flex-row items-center gap-12">
-        <div class="md:w-1/2">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/WZh9p02k_bA?si=euMVgOEoOLDFGC4y&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe>
+    <!-- Por dentro da Mentoria -->
+    <section id="mentoria" class="py-16 md:py-24" style="background-color: var(--md-sys-color-surface-variant);">
+      <div class="container mx-auto px-6">
+        <div class="text-center max-w-4xl mx-auto">
+          <h2 class="section-title">O Caminho Completo Para Sua Vaga na Gringa</h2>
+          <p class="section-subtitle">Não é um curso teórico. É um plano de ação prático para transformar sua
+            experiência em um contrato internacional.</p>
         </div>
-        <div class="md:w-1/2">
-          <h2 class="section-title">Seu mentor já esteve no seu lugar.</h2>
-          <h3 class="text-2xl font-medium mb-4" style="color: var(--md-sys-color-primary);">Meu nome é Robson Cassiano.</h3>
-          <p class="mb-4">Eu não sou um guru de palco. Sou um DEV Sênior que, assim como você, se cansou do mercado brasileiro. Decidi que meu código valia mais e fui atrás das vagas internacionais. Consegui.</p>
-          <p class="mb-4">Passei pelo BTG Pactual, atendi clientes na Alemanha, Holanda e EUA, e fundei minha própria empresa, a Simple Software. Além da minha bagagem como DEV, sou professor de inglês com certificação internacional CELTA (Cambridge). Hoje, eu vivo a realidade de faturar em dólar e euro.</p>
-          <p class="font-bold">Eu gravei minhas entrevistas, analisei cada uma delas e compilei cada erro, acerto e estratégia nesse método. Vou te entregar o mapa que eu gostaria de ter recebido, sem atalhos falsos, só o caminho que funciona.</p>
-          <div class="mt-6 flex flex-wrap gap-4">
-            <span class="py-2 px-4 rounded-full font-medium" style="background-color: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container);">DEV desde 2018</span>
-            <span class="py-2 px-4 rounded-full font-medium" style="background-color: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container);">Ex-BTG Pactual</span>
-            <span class="py-2 px-4 rounded-full font-medium" style="background-color: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container);">Founder Simple Software</span>
-            <span class="py-2 px-4 rounded-full font-medium" style="background-color: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container);">Professor de Inglês com Certificação CELTA</span>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="card"
+            style="background-color: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container)">
+            <span class="material-icons text-4xl mb-4" style="color: var(--md-sys-color-primary);">campaign</span>
+            <h3 class="text-2xl font-bold mb-2">Seja o Candidato Óbvio</h3>
+            <p>Vamos construir um posicionamento tão forte que os recrutadores virão até você. Você terá um LinkedIn
+              magnético, um portfólio que vende seu trabalho e uma marca pessoal de especialista internacional.</p>
+          </div>
+          <div class="card"
+            style="background-color: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container)">
+            <span class="material-icons text-4xl mb-4" style="color: var(--md-sys-color-secondary);">school</span>
+            <h3 class="text-2xl font-bold mb-2">Domine a Entrevista Técnica</h3>
+            <p>Você vai aprender o inglês que importa com um professor certificado (CELTA). É o inglês estratégico para
+              negociar, defender suas ideias no desafio técnico e gerar confiança, alinhado a um plano de estudos focado
+              no que as empresas realmente cobram.</p>
+          </div>
+          <div class="card"
+            style="background-color: var(--md-sys-color-tertiary-container); color: var(--md-sys-color-on-tertiary-container)">
+            <span class="material-icons text-4xl mb-4" style="color: var(--md-sys-color-tertiary);">work</span>
+            <h3 class="text-2xl font-bold mb-2">Receba o "Sim" na Proposta</h3>
+            <p>Com currículo no padrão global e treinos de entrevista baseados em cenários reais das minhas próprias
+              gravações, você chegará em cada conversa sabendo exatamente o que falar. Da abordagem inicial até a
+              negociação final do seu salário em moeda forte.</p>
           </div>
         </div>
       </div>
+    </section>
+
+    <!-- Quem é o mentor -->
+    <section id="mentor" class="py-16 md:py-24">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+          <div class="md:w-1/2">
+            <iframe width="560" height="315"
+              src="https://www.youtube.com/embed/WZh9p02k_bA?si=euMVgOEoOLDFGC4y&amp;controls=0"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe>
+          </div>
+          <div class="md:w-1/2">
+            <h2 class="section-title">Seu mentor já esteve no seu lugar.</h2>
+            <h3 class="text-2xl font-medium mb-4" style="color: var(--md-sys-color-primary);">Meu nome é Robson
+              Cassiano.</h3>
+            <p class="mb-4">Eu não sou um guru de palco. Sou um DEV Sênior que, assim como você, se cansou do mercado
+              brasileiro. Decidi que meu código valia mais e fui atrás das vagas internacionais. Consegui.</p>
+            <p class="mb-4">Passei pelo BTG Pactual, atendi clientes na Alemanha, Holanda e EUA, e fundei minha própria
+              empresa, a Simple Software. Além da minha bagagem como DEV, sou professor de inglês com certificação
+              internacional CELTA (Cambridge). Hoje, eu vivo a realidade de faturar em dólar e euro.</p>
+            <p class="font-bold">Eu gravei minhas entrevistas, analisei cada uma delas e compilei cada erro, acerto e
+              estratégia nesse método. Vou te entregar o mapa que eu gostaria de ter recebido, sem atalhos falsos, só o
+              caminho que funciona.</p>
+            <div class="mt-6 flex flex-wrap gap-4">
+              <span class="py-2 px-4 rounded-full font-medium"
+                style="background-color: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container);">DEV
+                desde 2018</span>
+              <span class="py-2 px-4 rounded-full font-medium"
+                style="background-color: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container);">Ex-BTG
+                Pactual</span>
+              <span class="py-2 px-4 rounded-full font-medium"
+                style="background-color: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container);">Founder
+                Simple Software</span>
+              <span class="py-2 px-4 rounded-full font-medium"
+                style="background-color: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container);">Professor
+                de Inglês com Certificação CELTA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Garantia -->
+    <section class="py-16 md:py-24 text-center" style="background-color: var(--md-sys-color-tertiary-container);">
+      <div class="container mx-auto px-6">
+        <h2 class="section-title" style="color: var(--md-sys-color-tertiary);">Sua Decisão é 100% Segura</h2>
+        <div class="max-w-3xl mx-auto flex flex-col items-center">
+          <div class="flex items-center gap-4 mb-4">
+            <span class="material-icons text-6xl" style="color: var(--md-sys-color-tertiary);">verified_user</span>
+            <p class="text-lg md:text-xl text-left" style="color: var(--md-sys-color-on-tertiary-container);">Meu
+              compromisso é com o seu resultado. Se em 7 dias, após aplicar o início do método, você sentir que isso não
+              é para você, <strong>eu devolvo 100% do seu dinheiro.</strong> O risco é todo meu.</p>
+          </div>
+          <a href="https://pay.hotmart.com/G101388470S?bid=1760573868358" target="_blank" class="btn btn-primary mt-6"
+            style="background-color: var(--md-sys-color-tertiary); color: var(--md-sys-color-on-tertiary);">Quero
+            garantir minha vaga, sem riscos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-16 md:py-24">
+      <div class="container mx-auto px-6 max-w-4xl">
+        <div class="text-center mb-12">
+          <h2 class="section-title">Suas Dúvidas, Respondidas</h2>
+        </div>
+        <div class="space-y-6">
+          <div class="card">
+            <h3 class="text-xl font-bold mb-2">Para quem é essa mentoria?</h3>
+            <p>É para o profissional de TI que se considera sênior. Se você não é o "bobo da mesa" na sua equipe e sabe
+              que seu trabalho vale mais, este é o seu lugar.</p>
+          </div>
+          <div class="card">
+            <h3 class="text-xl font-bold mb-2">Meu inglês não é perfeito. E agora?</h3>
+            <p>Você não precisa ser fluente, precisa ser estratégico. O foco é te dar a confiança e o vocabulário para
+              se comunicar bem nas entrevistas, com a orientação de um DEV Sênior que também é professor de inglês com
+              certificação CELTA de Cambridge. Para ter uma ideia do nível necessário, veja minhas entrevistas reais no
+              Youtube.</p>
+          </div>
+          <div class="card">
+            <h3 class="text-xl font-bold mb-2">Terei resultados garantidos?</h3>
+            <p>Eu não posso fazer a entrevista por você. O que eu garanto é que você terá em mãos um método validado que
+              aumenta drasticamente suas chances. Vou te preparar para que não haja surpresas no processo. O resultado
+              final depende da sua execução.</p>
+          </div>
+          <div class="card">
+            <h3 class="text-xl font-bold mb-2">O que torna este método diferente?</h3>
+            <p>Simples: ele não é baseado em teoria, mas em prática documentada. Todo o material de preparação para
+              entrevistas foi extraído diretamente das gravações das minhas próprias entrevistas reais, tanto as que
+              resultaram em aprovação quanto as que não. Você aprende com acertos e erros que aconteceram de verdade.
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="text-xl font-bold mb-2">Como funciona o pagamento?</h3>
+            <p>É simples e seguro. Aceitamos Pix e Cartão de Crédito.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Termos e Condições -->
+    <section id="termos" class="py-16 md:py-24" style="background-color: var(--md-sys-color-surface-variant);">
+      <div class="container mx-auto px-6 max-w-4xl">
+        <div class="text-center mb-12">
+          <h2 class="section-title">Termos e Condições</h2>
+          <p class="section-subtitle">Mentoria de Carreira Internacional</p>
+        </div>
+        <div class="prose max-w-none text-left space-y-4">
+          <p><strong>1. Serviços:</strong> A Simple Software LTDA ("Mentor") oferece mentoria para programadores que
+            buscam carreiras internacionais, incluindo estratégias de busca de emprego, desenvolvimento de habilidades,
+            preparação para entrevistas, negociação salarial e aulas de inglês.</p>
+          <p><strong>2. Objetivo:</strong> Ajudar você a conseguir um emprego como programador no exterior.</p>
+          <p><strong>3. Reembolso:</strong> Garantia Incondicional de 7 dias. Se você não estiver satisfeito, solicite o
+            reembolso por e-mail e devolvemos integralmente seu dinheiro.</p>
+          <p><strong>4. Cancelamento:</strong> Você pode cancelar a mentoria a qualquer momento. Se tiver cumprido a
+            checklist e não conseguiu a vaga, solicite o reembolso integral.</p>
+          <p><strong>5. Confidencialidade:</strong> Suas informações serão mantidas em sigilo, exceto quando exigido por
+            lei.</p>
+          <p><strong>6. Responsabilidades:</strong> Você precisa fornecer informações precisas e se comprometer com as
+            tarefas da mentoria. O sucesso depende do seu esforço também.</p>
+          <p><strong>7. Limitação de Responsabilidade:</strong> Não garantimos resultados específicos ou a obtenção de
+            um emprego. Temos métodos comprovados para colocar as probabilidades a seu favor, mas não realizamos as
+            entrevistas por você.</p>
+          <p><strong>8. Uso de Imagem e Voz:</strong> Ao participar, você autoriza a Simple Software LTDA a gravar sua
+            imagem e voz durante as aulas para uso em materiais educacionais e promocionais. Caso não concorde, informe
+            por e-mail antes do início.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comentários -->
+    <section id="comments" class="py-16 md:py-24">
+      <div class="container mx-auto px-6 max-w-4xl">
+        <script src="https://giscus.app/client.js" data-repo="SimpleSoftwareLTDA/treinamento-descomplica-dev-na-gringa"
+          data-repo-id="R_kgDOPzlKVQ" data-category="Q&A" data-category-id="DIC_kwDOPzlKVc4C0BVd"
+          data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="1"
+          data-input-position="top" data-theme="dark" data-lang="pt" data-loading="lazy" crossorigin="anonymous" async>
+          </script>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="py-8" style="background-color: var(--md-sys-color-on-surface); color: var(--md-sys-color-surface);">
+    <div class="container mx-auto px-6 text-center">
+      <p>&copy; 2022 SIMPLE SOFTWARE LTDA. Uma mentoria de DEV para DEV.</p>
+      <p class="text-sm mt-2">Ainda em dúvida? <a href="https://youtu.be/OKjAuk-eu8M" target="_blank"
+          class="font-bold underline">Veja as entrevistas reais que deram origem a este método.</a></p>
     </div>
-  </section>
+  </footer>
 
-  <!-- Garantia -->
-  <section class="py-16 md:py-24 text-center" style="background-color: var(--md-sys-color-tertiary-container);">
-    <div class="container mx-auto px-6">
-      <h2 class="section-title" style="color: var(--md-sys-color-tertiary);">Sua Decisão é 100% Segura</h2>
-      <div class="max-w-3xl mx-auto flex flex-col items-center">
-        <div class="flex items-center gap-4 mb-4">
-          <span class="material-icons text-6xl" style="color: var(--md-sys-color-tertiary);">verified_user</span>
-          <p class="text-lg md:text-xl text-left" style="color: var(--md-sys-color-on-tertiary-container);">Meu compromisso é com o seu resultado. Se em 7 dias, após aplicar o início do método, você sentir que isso não é para você, <strong>eu devolvo 100% do seu dinheiro.</strong> O risco é todo meu.</p>
-        </div>
-        <a href="https://pay.hotmart.com/G101388470S?bid=1760573868358" target="_blank" class="btn btn-primary mt-6" style="background-color: var(--md-sys-color-tertiary); color: var(--md-sys-color-on-tertiary);">Quero garantir minha vaga, sem riscos</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq" class="py-16 md:py-24">
-    <div class="container mx-auto px-6 max-w-4xl">
-      <div class="text-center mb-12">
-        <h2 class="section-title">Suas Dúvidas, Respondidas</h2>
-      </div>
-      <div class="space-y-6">
-        <div class="card">
-          <h3 class="text-xl font-bold mb-2">Para quem é essa mentoria?</h3>
-          <p>É para o profissional de TI que se considera sênior. Se você não é o "bobo da mesa" na sua equipe e sabe que seu trabalho vale mais, este é o seu lugar.</p>
-        </div>
-        <div class="card">
-          <h3 class="text-xl font-bold mb-2">Meu inglês não é perfeito. E agora?</h3>
-          <p>Você não precisa ser fluente, precisa ser estratégico. O foco é te dar a confiança e o vocabulário para se comunicar bem nas entrevistas, com a orientação de um DEV Sênior que também é professor de inglês com certificação CELTA de Cambridge. Para ter uma ideia do nível necessário, veja minhas entrevistas reais no Youtube.</p>
-        </div>
-        <div class="card">
-          <h3 class="text-xl font-bold mb-2">Terei resultados garantidos?</h3>
-          <p>Eu não posso fazer a entrevista por você. O que eu garanto é que você terá em mãos um método validado que aumenta drasticamente suas chances. Vou te preparar para que não haja surpresas no processo. O resultado final depende da sua execução.</p>
-        </div>
-        <div class="card">
-          <h3 class="text-xl font-bold mb-2">O que torna este método diferente?</h3>
-          <p>Simples: ele não é baseado em teoria, mas em prática documentada. Todo o material de preparação para entrevistas foi extraído diretamente das gravações das minhas próprias entrevistas reais, tanto as que resultaram em aprovação quanto as que não. Você aprende com acertos e erros que aconteceram de verdade.</p>
-        </div>
-        <div class="card">
-          <h3 class="text-xl font-bold mb-2">Como funciona o pagamento?</h3>
-          <p>É simples e seguro. Aceitamos Pix e Cartão de Crédito.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Termos e Condições -->
-  <section id="termos" class="py-16 md:py-24" style="background-color: var(--md-sys-color-surface-variant);">
-    <div class="container mx-auto px-6 max-w-4xl">
-      <div class="text-center mb-12">
-        <h2 class="section-title">Termos e Condições</h2>
-        <p class="section-subtitle">Mentoria de Carreira Internacional</p>
-      </div>
-      <div class="prose max-w-none text-left space-y-4">
-        <p><strong>1. Serviços:</strong> A Simple Software LTDA ("Mentor") oferece mentoria para programadores que buscam carreiras internacionais, incluindo estratégias de busca de emprego, desenvolvimento de habilidades, preparação para entrevistas, negociação salarial e aulas de inglês.</p>
-        <p><strong>2. Objetivo:</strong> Ajudar você a conseguir um emprego como programador no exterior.</p>
-        <p><strong>3. Reembolso:</strong> Garantia Incondicional de 7 dias. Se você não estiver satisfeito, solicite o reembolso por e-mail e devolvemos integralmente seu dinheiro.</p>
-        <p><strong>4. Cancelamento:</strong> Você pode cancelar a mentoria a qualquer momento. Se tiver cumprido a checklist e não conseguiu a vaga, solicite o reembolso integral.</p>
-        <p><strong>5. Confidencialidade:</strong> Suas informações serão mantidas em sigilo, exceto quando exigido por lei.</p>
-        <p><strong>6. Responsabilidades:</strong> Você precisa fornecer informações precisas e se comprometer com as tarefas da mentoria. O sucesso depende do seu esforço também.</p>
-        <p><strong>7. Limitação de Responsabilidade:</strong> Não garantimos resultados específicos ou a obtenção de um emprego. Temos métodos comprovados para colocar as probabilidades a seu favor, mas não realizamos as entrevistas por você.</p>
-        <p><strong>8. Uso de Imagem e Voz:</strong> Ao participar, você autoriza a Simple Software LTDA a gravar sua imagem e voz durante as aulas para uso em materiais educacionais e promocionais. Caso não concorde, informe por e-mail antes do início.</p>
-      </div>
-    </div>
-  </section>
-</main>
-
-<!-- Rodapé -->
-<footer class="py-8" style="background-color: var(--md-sys-color-on-surface); color: var(--md-sys-color-surface);">
-  <div class="container mx-auto px-6 text-center">
-    <p>&copy; 2022 SIMPLE SOFTWARE LTDA. Uma mentoria de DEV para DEV.</p>
-    <p class="text-sm mt-2">Ainda em dúvida? <a href="https://youtu.be/OKjAuk-eu8M" target="_blank" class="font-bold underline">Veja as entrevistas reais que deram origem a este método.</a></p>
-  </div>
-</footer>
-
-<script src="js/main.js" defer></script>
+  <script src="js/main.js" defer></script>
 
 </body>
+
 </html>
