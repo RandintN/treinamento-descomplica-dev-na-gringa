@@ -182,21 +182,39 @@
 <body class="antialiased selection:bg-cyan-500 selection:text-white">
 
   <!-- Header Glass -->
-  <header class="fixed w-full top-0 z-50 glass border-b border-white/10 transition-all duration-300">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <div class="flex items-center gap-2 group cursor-pointer">
-        <span
-          class="material-icons text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 text-4xl group-hover:scale-110 transition-transform">code</span>
-        <span class="text-xl font-bold tracking-wider text-slate-100">SIMPLE SOFTWARE</span>
+  <header class="fixed w-full top-0 z-50 glass border-b border-white/10 transition-all duration-300 px-4 py-2">
+    <div class="flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <!-- MD3 Language Switcher (Far Left) -->
+        <div
+          class="flex items-center bg-slate-900/60 backdrop-blur-xl rounded-full p-1 border border-white/10 shadow-lg">
+          <span class="material-icons text-slate-400 text-xs ml-1.5 mr-1">language</span>
+          <button
+            class="lang-btn px-2 py-0.5 rounded-full text-[9px] font-bold transition-all border border-transparent"
+            data-lang="pt">PT</button>
+          <button
+            class="lang-btn px-2 py-0.5 rounded-full text-[9px] font-bold transition-all border border-transparent"
+            data-lang="en">EN</button>
+        </div>
+
+        <div class="flex items-center gap-2 group cursor-pointer">
+          <span
+            class="material-icons text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 text-3xl group-hover:scale-110 transition-transform">code</span>
+          <span class="text-lg font-bold tracking-tighter text-slate-100 uppercase">Simple Software</span>
+        </div>
       </div>
 
       <!-- Desktop Nav -->
       <nav class="hidden md:flex items-center space-x-8">
-        <a href="#home" class="text-slate-300 hover:text-cyan-400 font-medium transition-colors">Início</a>
-        <a href="#mentoria" class="text-slate-300 hover:text-cyan-400 font-medium transition-colors">O Método</a>
-        <a href="#mentor" class="text-slate-300 hover:text-cyan-400 font-medium transition-colors">Mentor</a>
-        <a href="#faq" class="text-slate-300 hover:text-cyan-400 font-medium transition-colors">FAQ</a>
-        <a href="https://pay.hotmart.com/G101388470S" target="_blank"
+        <a href="#home" data-i18n="nav-home"
+          class="text-slate-300 hover:text-cyan-400 font-medium transition-colors">Início</a>
+        <a href="#mentoria" data-i18n="nav-method"
+          class="text-slate-300 hover:text-cyan-400 font-medium transition-colors">O Método</a>
+        <a href="#mentor" data-i18n="nav-mentor"
+          class="text-slate-300 hover:text-cyan-400 font-medium transition-colors">Mentor</a>
+        <a href="#faq" data-i18n="nav-faq"
+          class="text-slate-300 hover:text-cyan-400 font-medium transition-colors">FAQ</a>
+        <a href="https://pay.hotmart.com/G101388470S" data-i18n="nav-cta" data-i18n-href="cta-link" target="_blank"
           class="btn-glow px-6 py-2 rounded-full text-slate-900 font-bold shadow-lg shadow-cyan-500/20">
           Garantir Vaga
         </a>
@@ -217,11 +235,21 @@
     <button id="close-mobile-menu" class="absolute top-6 right-6 text-slate-400 hover:text-white">
       <span class="material-icons text-4xl">close</span>
     </button>
-    <a href="#home" class="mobile-nav-link text-2xl font-bold text-white hover:text-cyan-400">Início</a>
-    <a href="#mentoria" class="mobile-nav-link text-2xl font-bold text-white hover:text-cyan-400">O Método</a>
-    <a href="#mentor" class="mobile-nav-link text-2xl font-bold text-white hover:text-cyan-400">Seu Mentor</a>
-    <a href="#faq" class="mobile-nav-link text-2xl font-bold text-white hover:text-cyan-400">Dúvidas</a>
-    <a href="https://pay.hotmart.com/G101388470S" target="_blank" class="btn-glow px-8 py-3 text-lg">Começar Agora</a>
+    <div class="flex items-center bg-slate-800/50 rounded-full p-1.5 border border-white/10 mb-8">
+      <span class="material-icons text-slate-400 mr-2 ml-2">language</span>
+      <button class="lang-btn px-4 py-2 rounded-full text-sm font-bold transition-all" data-lang="pt">PT</button>
+      <button class="lang-btn px-4 py-2 rounded-full text-sm font-bold transition-all" data-lang="en">EN</button>
+    </div>
+    <a href="#home" data-i18n="nav-home"
+      class="mobile-nav-link text-2xl font-bold text-white hover:text-cyan-400">Início</a>
+    <a href="#mentoria" data-i18n="nav-method"
+      class="mobile-nav-link text-2xl font-bold text-white hover:text-cyan-400">O Método</a>
+    <a href="#mentor" data-i18n="nav-mentor"
+      class="mobile-nav-link text-2xl font-bold text-white hover:text-cyan-400">Seu Mentor</a>
+    <a href="#faq" data-i18n="nav-faq"
+      class="mobile-nav-link text-2xl font-bold text-white hover:text-cyan-400">Dúvidas</a>
+    <a href="https://pay.hotmart.com/G101388470S" data-i18n="nav-cta" data-i18n-href="cta-link" target="_blank"
+      class="btn-glow px-8 py-3 text-lg">Começar Agora</a>
   </div>
 
   <main>
@@ -236,23 +264,25 @@
       <div class="container mx-auto px-6 text-center z-10 relative">
         <div
           class="inline-block px-4 py-1.5 mb-6 rounded-full border border-cyan-500/30 bg-cyan-900/20 backdrop-blur-sm">
-          <span class="text-cyan-400 font-semibold tracking-wide text-sm uppercase">Não é Sorte. São dados, evidências e
+          <span data-i18n="hero-badge" class="text-cyan-400 font-semibold tracking-wide text-sm uppercase">Não é Sorte.
+            São dados, evidências e
             provas reais, auditáveis e replicáveis.</span>
         </div>
-        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
+        <h1 data-i18n="hero-title" class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
           Seu Código Vale <br />
           <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">Dólar ou Euro</span>
         </h1>
-        <p class="text-xl md:text-2xl text-slate-400 mb-10 max-w-3xl mx-auto font-light leading-relaxed">
+        <p data-i18n="hero-subtitle"
+          class="text-xl md:text-2xl text-slate-400 mb-10 max-w-3xl mx-auto font-light leading-relaxed">
           Não existe "eu acho". Existe o que aprova. Acesse o único método baseado em um <strong>banco de dados de 5
             anos de entrevistas gravadas</strong> e auditáveis para QA, iOS, DevOps e Fullstack.
         </p>
         <div class="flex flex-col md:flex-row justify-center gap-4">
-          <a href="https://pay.hotmart.com/G101388470S" target="_blank"
-            class="btn-glow px-8 py-4 text-lg shadow-xl shadow-blue-500/20">
+          <a href="https://pay.hotmart.com/G101388470S" data-i18n="hero-cta-primary" data-i18n-href="cta-link"
+            target="_blank" class="btn-glow px-8 py-4 text-lg shadow-xl shadow-blue-500/20">
             Quero Acessar o Treinamento
           </a>
-          <a href="#provas"
+          <a href="#provas" data-i18n="hero-cta-secondary"
             class="px-8 py-4 rounded-full border border-slate-700 hover:border-cyan-400 text-slate-300 hover:text-cyan-400 transition-all font-medium">
             Ver as Provas
           </a>
@@ -263,15 +293,15 @@
     <!-- Problem/Intro Section -->
     <section class="py-20 relative">
       <div class="container mx-auto px-6 max-w-4xl text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-6">Pare de Jogar o Jogo da Adivinhação.</h2>
-        <p class="text-lg text-slate-400 mb-12">
+        <h2 data-i18n="section-problem-title" class="text-3xl md:text-4xl font-bold mb-6">Pare de Jogar o Jogo da
+          Adivinhação.</h2>
+        <p data-i18n="section-problem-text" class="text-lg text-slate-400 mb-12">
           Enquanto você tenta descobrir o que o recrutador quer ouvir, meus alunos têm o <strong>gabarito</strong>.
           A diferença entre quem passa e quem trava não é código. <strong class="text-cyan-400">É informação
             privilegiada.</strong>
         </p>
-
         <div class="glass-card p-10 rounded-2xl text-left border-l-4 border-l-cyan-500">
-          <p class="text-lg text-slate-300 leading-relaxed">
+          <p data-i18n="section-problem-quote" class="text-lg text-slate-300 leading-relaxed">
             "Eu não "acho" que isso funciona. Eu tenho <strong>5 anos de gravações de entrevistas reais</strong> —
             minhas e dos meus alunos — em stacks variadas como <strong>QA, iOS, DevOps e Backend</strong>. Eu mapeei
             cada pergunta, cada objeção e cada resposta que gerou uma oferta em Dólar."
@@ -281,7 +311,7 @@
               class="w-12 h-12 rounded-full border-2 border-cyan-500 object-cover" loading="lazy">
             <div>
               <p class="font-bold text-white">Robson Cassiano</p>
-              <p class="text-sm text-cyan-400">Compilador de Dados de Mercado</p>
+              <p data-i18n="section-problem-mentor-tag" class="text-sm text-cyan-400">Compilador de Dados de Mercado</p>
             </div>
           </div>
         </div>
@@ -292,11 +322,11 @@
     <section id="mentoria" class="py-24 bg-slate-900/50">
       <div class="container mx-auto px-6">
         <div class="text-center max-w-3xl mx-auto mb-16">
-          <h2 class="text-3xl md:text-5xl font-bold mb-4">Reconhecimento de Padrões</h2>
-          <p class="text-slate-400 text-lg">Eu não ensino "dicas". Eu ensino padrões extraídos de centenas de horas de
+          <h2 data-i18n="method-title" class="text-3xl md:text-5xl font-bold mb-4">Reconhecimento de Padrões</h2>
+          <p data-i18n="method-subtitle" class="text-slate-400 text-lg">Eu não ensino "dicas". Eu ensino padrões
+            extraídos de centenas de horas de
             filmagens reais.</p>
         </div>
-
         <div class="grid md:grid-cols-3 gap-8">
           <!-- Card 1 -->
           <div class="glass-card p-8 rounded-2xl group hover:bg-slate-800/50 transition-colors">
@@ -304,30 +334,31 @@
               class="w-14 h-14 rounded-xl bg-blue-500/10 flex items-center justify-center mb-6 group-hover:bg-blue-500/20 transition-colors">
               <span class="material-icons text-blue-400 text-3xl">campaign</span>
             </div>
-            <h3 class="text-2xl font-bold mb-3 text-white">Posicionamento</h3>
-            <p class="text-slate-400 leading-relaxed">LinkedIn magnético e portfólio estratégico. Torne-se a opção óbvia
+            <h3 data-i18n="method-card-1-title" class="text-2xl font-bold mb-3 text-white">Posicionamento</h3>
+            <p data-i18n="method-card-1-text" class="text-slate-400 leading-relaxed">LinkedIn magnético e portfólio
+              estratégico. Torne-se a opção óbvia
               para os recrutadores internacionais.</p>
           </div>
-
           <!-- Card 2 -->
           <div class="glass-card p-8 rounded-2xl group hover:bg-slate-800/50 transition-colors">
             <div
               class="w-14 h-14 rounded-xl bg-purple-500/10 flex items-center justify-center mb-6 group-hover:bg-purple-500/20 transition-colors">
               <span class="material-icons text-purple-400 text-3xl">school</span>
             </div>
-            <h3 class="text-2xl font-bold mb-3 text-white">Inglês Técnico</h3>
-            <p class="text-slate-400 leading-relaxed">Aprenda o inglês que aprova. Vocabulário para defender suas ideias
+            <h3 data-i18n="method-card-2-title" class="text-2xl font-bold mb-3 text-white">Inglês Técnico</h3>
+            <p data-i18n="method-card-2-text" class="text-slate-400 leading-relaxed">Aprenda o inglês que aprova.
+              Vocabulário para defender suas ideias
               e negociar com confiança.</p>
           </div>
-
           <!-- Card 3 -->
           <div class="glass-card p-8 rounded-2xl group hover:bg-slate-800/50 transition-colors">
             <div
               class="w-14 h-14 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-6 group-hover:bg-cyan-500/20 transition-colors">
               <span class="material-icons text-cyan-400 text-3xl">work</span>
             </div>
-            <h3 class="text-2xl font-bold mb-3 text-white">Aprovação</h3>
-            <p class="text-slate-400 leading-relaxed">Simulações baseadas em entrevistas reais. Saiba exatamente o que
+            <h3 data-i18n="method-card-3-title" class="text-2xl font-bold mb-3 text-white">Aprovação</h3>
+            <p data-i18n="method-card-3-text" class="text-slate-400 leading-relaxed">Simulações baseadas em entrevistas
+              reais. Saiba exatamente o que
               responder em cada etapa.</p>
           </div>
         </div>
@@ -337,10 +368,10 @@
     <!-- Real Results (Audit-able) -->
     <section id="provas" class="py-20 relative overflow-hidden">
       <div class="container mx-auto px-6 text-center">
-        <h2 class="text-3xl md:text-5xl font-bold mb-4">Aprovação Auditável</h2>
-        <p class="text-slate-400 text-lg mb-12">Não são apenas prints. São carreiras transformadas. <b>Dúvida? Clique
+        <h2 data-i18n="proof-title" class="text-3xl md:text-5xl font-bold mb-4">Aprovação Auditável</h2>
+        <p data-i18n="proof-subtitle" class="text-slate-400 text-lg mb-12">Não são apenas prints. São carreiras
+          transformadas. <b>Dúvida? Clique
             nos depoimentos e fale diretamente com os alunos.</b></p>
-
         <!-- Featured Video Testimonial -->
         <div class="max-w-3xl mx-auto mb-16">
           <div class="relative rounded-2xl overflow-hidden glass border border-slate-700 shadow-2xl">
@@ -350,7 +381,6 @@
               referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
           </div>
         </div>
-
         <!-- Masonry/Grid for Testimonials -->
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <a href="https://robsoncassiano.software/resultados-reais-para-os-alunos" target="_blank"
@@ -369,9 +399,8 @@
               height="1090" class="w-full h-auto rounded-lg border border-slate-700/50 shadow-lg" loading="lazy">
           </a>
         </div>
-
         <div class="mt-12">
-          <p class="text-slate-500 text-sm">Dados extraídos do <a
+          <p data-i18n="proof-footer" class="text-slate-500 text-sm">Dados extraídos do <a
               href="https://docs.google.com/document/d/1n4Tpy6o1B6RlUC-2Aiv0McErMCKlPtuqHP5INCLCBKs/edit?usp=sharing"
               target="_blank" class="text-cyan-600 hover:text-cyan-400 underline">documento público de resultados</a>
           </p>
@@ -397,26 +426,25 @@
 
           <!-- Content -->
           <div class="w-full lg:w-1/2">
-            <h2 class="text-3xl md:text-5xl font-bold mb-6">Quem é seu mentor?</h2>
-            <p class="text-lg text-slate-300 mb-6">
+            <h2 data-i18n="mentor-title" class="text-3xl md:text-5xl font-bold mb-6">Quem é seu mentor?</h2>
+            <p data-i18n="mentor-p1" class="text-lg text-slate-300 mb-6">
               Sou <a href="https://eu.robsoncassiano.software/" target="_blank" rel="noopener noreferrer"
                 class="text-cyan-400 hover:text-cyan-300 transition-colors"><strong>Robson Cassiano</strong></a>.
               Atualmente na <b>Epic Games</b>. Ex-BTG Pactual, Founder da Simple Software Tryquetra e
               Professor de Inglês certificado (CELTA).
             </p>
-            <p class="text-slate-400 mb-8 leading-relaxed">
+            <p data-i18n="mentor-p2" class="text-slate-400 mb-8 leading-relaxed">
               Eu vivo o que ensino. Trabalho para clientes nos EUA e Europa, ganhando em moeda forte. Eu cansei de ver
               brasileiros talentosos ganhando pouco. Por isso criei este método.
             </p>
-
             <div class="flex flex-wrap gap-3">
-              <span
+              <span data-i18n="mentor-tag-1"
                 class="px-4 py-2 rounded-lg bg-slate-800 text-cyan-300 text-sm font-semibold border border-slate-700">DEV
                 desde 2018</span>
-              <span
+              <span data-i18n="mentor-tag-2"
                 class="px-4 py-2 rounded-lg bg-slate-800 text-cyan-300 text-sm font-semibold border border-slate-700">CELTA
                 Cambridge</span>
-              <span
+              <span data-i18n="mentor-tag-3"
                 class="px-4 py-2 rounded-lg bg-slate-800 text-cyan-300 text-sm font-semibold border border-slate-700">Founder
                 Simple Software</span>
             </div>
@@ -431,12 +459,12 @@
         <div
           class="glass-card max-w-3xl mx-auto p-10 rounded-3xl border border-cyan-500/30 shadow-[0_0_50px_rgba(34,211,238,0.1)]">
           <span class="material-icons text-6xl text-cyan-400 mb-4">verified_user</span>
-          <h2 class="text-3xl font-bold text-white mb-4">Risco Zero</h2>
-          <p class="text-slate-300 mb-8">
+          <h2 data-i18n="guarantee-title" class="text-3xl font-bold text-white mb-4">Risco Zero</h2>
+          <p data-i18n="guarantee-text" class="text-slate-300 mb-8">
             Você tem 7 dias de garantia incondicional. Se não gostar, eu devolvo 100% do seu dinheiro. Sem perguntas.
           </p>
-          <a href="https://pay.hotmart.com/G101388470S?bid=1760573868358" target="_blank"
-            class="btn-glow inline-flex px-10 py-3 text-lg">
+          <a href="https://pay.hotmart.com/G101388470S?bid=1760573868358" data-i18n="guarantee-cta"
+            data-i18n-href="cta-link" target="_blank" class="btn-glow inline-flex px-10 py-3 text-lg">
             Garantir minha vaga com segurança
           </a>
         </div>
@@ -447,53 +475,53 @@
     <section id="faq" class="py-24">
       <div class="container mx-auto px-6 max-w-3xl">
         <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-5xl font-bold">Dúvidas Frequentes</h2>
+          <h2 data-i18n="faq-title" class="text-3xl md:text-5xl font-bold">Dúvidas Frequentes</h2>
         </div>
-
         <div class="space-y-6">
           <details class="glass-card p-6 rounded-xl group cursor-pointer">
             <summary class="flex justify-between items-center font-bold text-lg text-white list-none">
-              Para quem é a mentoria?
+              <span data-i18n="faq-q1">Para quem é a mentoria?</span>
               <span class="material-icons transition-transform group-open:rotate-180 text-cyan-400">expand_more</span>
             </summary>
-            <p class="mt-4 text-slate-400 leading-relaxed">Focada em profissionais de TI (Devs, QAs, Data) que já tem
+            <p data-i18n="faq-a1" class="mt-4 text-slate-400 leading-relaxed">Focada em profissionais de TI (Devs, QAs,
+              Data) que já tem
               experiência técnica (Sênior/Pleno) e querem migrar para o mercado internacional.</p>
           </details>
-
           <details class="glass-card p-6 rounded-xl group cursor-pointer">
             <summary class="flex justify-between items-center font-bold text-lg text-white list-none">
-              Preciso ser fluente em inglês?
+              <span data-i18n="faq-q2">Preciso ser fluente em inglês?</span>
               <span class="material-icons transition-transform group-open:rotate-180 text-cyan-400">expand_more</span>
             </summary>
-            <p class="mt-4 text-slate-400 leading-relaxed">Não. Você precisa de inglês técnico e estratégico para
+            <p data-i18n="faq-a2" class="mt-4 text-slate-400 leading-relaxed">Não. Você precisa de inglês técnico e
+              estratégico para
               entrevistas. O método inclui módulos específicos para destravagem rápida da fala necessária.</p>
           </details>
-
           <details class="glass-card p-6 rounded-xl group cursor-pointer">
             <summary class="flex justify-between items-center font-bold text-lg text-white list-none">
-              Como funciona o pagamento?
+              <span data-i18n="faq-q3">Como funciona o pagamento?</span>
               <span class="material-icons transition-transform group-open:rotate-180 text-cyan-400">expand_more</span>
             </summary>
-            <p class="mt-4 text-slate-400 leading-relaxed">Pagamento seguro via Hotmart. Aceitamos Pix, Boleto e Cartão
+            <p data-i18n="faq-a3" class="mt-4 text-slate-400 leading-relaxed">Pagamento seguro via Hotmart. Aceitamos
+              Pix, Boleto e Cartão
               de Crédito em até 12x.</p>
           </details>
-
           <details class="glass-card p-6 rounded-xl group cursor-pointer">
             <summary class="flex justify-between items-center font-bold text-lg text-white list-none">
-              A mentoria async é adequada para quem tem pouca experiência (estagiários ou juniores)?
+              <span data-i18n="faq-q4">A mentoria async é adequada para quem tem pouca experiência (estagiários ou
+                juniores)?</span>
               <span class="material-icons transition-transform group-open:rotate-180 text-cyan-400">expand_more</span>
             </summary>
-            <p class="mt-4 text-slate-400 leading-relaxed">Sim. O conteúdo é fundamentalista e atemporal, não dependendo
+            <p data-i18n="faq-a4" class="mt-4 text-slate-400 leading-relaxed">Sim. O conteúdo é fundamentalista e
+              atemporal, não dependendo
               de "hypes" de mercado. O tempo atua a favor do iniciante: estudar e aplicar o método desde cedo facilita a
               disputa por vagas e acelera a maturação técnica necessária para posições globais.</p>
           </details>
-
           <details class="glass-card p-6 rounded-xl group cursor-pointer">
             <summary class="flex justify-between items-center font-bold text-lg text-white list-none">
-              Qual a diferença entre a "Mentoria Async" e o modelo tradicional "1-on-1"?
+              <span data-i18n="faq-q5">Qual a diferença entre a "Mentoria Async" e o modelo tradicional "1-on-1"?</span>
               <span class="material-icons transition-transform group-open:rotate-180 text-cyan-400">expand_more</span>
             </summary>
-            <div class="mt-4 text-slate-400 leading-relaxed space-y-4">
+            <div data-i18n="faq-a5" class="mt-4 text-slate-400 leading-relaxed space-y-4">
               <p>A Mentoria Async foca na eficiência e autonomia com suporte contínuo.</p>
               <p><strong>O que inclui:</strong> Suporte e direcionamento direto pelo WhatsApp pessoal do mentor, acesso
                 ao grupo de vagas e descontos exclusivos com professor nativo (EUA).</p>
@@ -501,23 +529,22 @@
                 1h).</p>
             </div>
           </details>
-
           <details class="glass-card p-6 rounded-xl group cursor-pointer">
             <summary class="flex justify-between items-center font-bold text-lg text-white list-none">
-              O método funciona para quem busca vagas no Brasil?
+              <span data-i18n="faq-q6">O método funciona para quem busca vagas no Brasil?</span>
               <span class="material-icons transition-transform group-open:rotate-180 text-cyan-400">expand_more</span>
             </summary>
-            <p class="mt-4 text-slate-400 leading-relaxed">Sim. Aplica-se o princípio lógico de "quem pode o mais, pode
+            <p data-i18n="faq-a6" class="mt-4 text-slate-400 leading-relaxed">Sim. Aplica-se o princípio lógico de "quem
+              pode o mais, pode
               o menos". Ao se preparar para processos de alta complexidade (como Amazon e vagas internacionais), você
               estará superqualificado para a grande maioria das posições no mercado doméstico.</p>
           </details>
-
           <details class="glass-card p-6 rounded-xl group cursor-pointer">
             <summary class="flex justify-between items-center font-bold text-lg text-white list-none">
-              Sou de outra stack (Python, C#, etc.). O conteúdo é focado apenas em Java?
+              <span data-i18n="faq-q7">Sou de outra stack (Python, C#, etc.). O conteúdo é focado apenas em Java?</span>
               <span class="material-icons transition-transform group-open:rotate-180 text-cyan-400">expand_more</span>
             </summary>
-            <div class="mt-4 text-slate-400 leading-relaxed space-y-4">
+            <div data-i18n="faq-a7" class="mt-4 text-slate-400 leading-relaxed space-y-4">
               <p>Não. Embora Java/Kotlin sejam as linguagens recomendadas para Software Engineers dentro do método, a
                 preparação comportamental, estrutural e de entrevistas serve para qualquer área da tecnologia (incluindo
                 QAs e Cientistas de Dados).</p>
@@ -525,21 +552,21 @@
                 cobre cargos gerenciais/executivos acima disso.</p>
             </div>
           </details>
-
           <details class="glass-card p-6 rounded-xl group cursor-pointer">
             <summary class="flex justify-between items-center font-bold text-lg text-white list-none">
-              Terei acesso a material de preparação para entrevistas?
+              <span data-i18n="faq-q8">Terei acesso a material de preparação para entrevistas?</span>
               <span class="material-icons transition-transform group-open:rotate-180 text-cyan-400">expand_more</span>
             </summary>
-            <p class="mt-4 text-slate-400 leading-relaxed">Sim, 100% do material preparatório está incluso.</p>
+            <p data-i18n="faq-a8" class="mt-4 text-slate-400 leading-relaxed">Sim, 100% do material preparatório está
+              incluso.</p>
           </details>
-
           <details class="glass-card p-6 rounded-xl group cursor-pointer">
             <summary class="flex justify-between items-center font-bold text-lg text-white list-none">
-              Por quanto tempo terei acesso ao conteúdo?
+              <span data-i18n="faq-q9">Por quanto tempo terei acesso ao conteúdo?</span>
               <span class="material-icons transition-transform group-open:rotate-180 text-cyan-400">expand_more</span>
             </summary>
-            <p class="mt-4 text-slate-400 leading-relaxed">O acesso é vitalício. Isso garante que você receba todas as
+            <p data-i18n="faq-a9" class="mt-4 text-slate-400 leading-relaxed">O acesso é vitalício. Isso garante que
+              você receba todas as
               melhorias e atualizações futuras do treinamento, documentadas com base em novas evidências e provas reais
               do mercado.</p>
           </details>
@@ -550,7 +577,7 @@
     <!-- Comments (Giscus) -->
     <section id="comments" class="py-16 bg-slate-900/50 border-t border-slate-800">
       <div class="container mx-auto px-6 max-w-4xl text-center">
-        <h3 class="text-2xl font-bold mb-8 text-slate-200">Comentários da Comunidade</h3>
+        <h3 data-i18n="comments-title" class="text-2xl font-bold mb-8 text-slate-200">Comentários da Comunidade</h3>
         <div class="glass-card p-6 md:p-10 rounded-2xl bg-black/20">
           <script src="https://giscus.app/client.js"
             data-repo="SimpleSoftwareLTDA/treinamento-descomplica-dev-na-gringa" data-repo-id="R_kgDOPzlKVQ"
@@ -562,26 +589,26 @@
       </div>
     </section>
   </main>
-
   <!-- Footer -->
   <footer class="py-12 border-t border-slate-800 bg-slate-950">
     <div class="container mx-auto px-6 text-center">
-      <p class="text-slate-500 mb-4">&copy; 2025 SIMPLE SOFTWARE LTDA. All rights reserved.</p>
+      <p data-i18n="footer-rights" class="text-slate-500 mb-4">&copy; 2025 SIMPLE SOFTWARE LTDA. All rights reserved.
+      </p>
       <div class="flex justify-center gap-6">
-        <a href="https://termos.robsoncassiano.software" class="text-sm text-slate-600 hover:text-cyan-400">Termos de
+        <a href="https://termos.robsoncassiano.software" data-i18n="footer-terms"
+          class="text-sm text-slate-600 hover:text-cyan-400">Termos de
           Uso</a>
-        <a href="https://www.youtube.com/@RobsonCassianoSoftware?sub_confirmation=1" target="_blank"
-          class="text-sm text-slate-600 hover:text-cyan-400">Canal Youtube</a>
-        <a href="https://www.linkedin.com/in/robsoncassiano-software/" target="_blank"
+        <a href="https://www.youtube.com/@RobsonCassianoSoftware?sub_confirmation=1" data-i18n="footer-youtube"
+          target="_blank" class="text-sm text-slate-600 hover:text-cyan-400">Canal Youtube</a>
+        <a href="https://www.linkedin.com/in/robsoncassiano-software/" data-i18n="footer-linkedin" target="_blank"
           class="text-sm text-slate-600 hover:text-cyan-400">LinkedIn</a>
-        <a href="https://beacons.ai/robson.cassiano/portflio" target="_blank"
+        <a href="https://beacons.ai/robson.cassiano/portflio" data-i18n="footer-portfolio" target="_blank"
           class="text-sm text-slate-600 hover:text-cyan-400">Portfólio</a>
-        <a href="https://randintn.substack.com" target="_blank"
+        <a href="https://randintn.substack.com" data-i18n="footer-newsletter" target="_blank"
           class="text-sm text-slate-600 hover:text-cyan-400">Newsletter</a>
       </div>
     </div>
   </footer>
-
   <script src="js/main.js" defer></script>
 </body>
 
