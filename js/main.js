@@ -10,7 +10,7 @@ const translations = {
     "nav-cta": "Garantir Vaga",
     "hero-badge": "Não é Sorte. São dados, evidências e provas reais, auditáveis e replicáveis.",
     "hero-title": "Seu Código Vale <br /><span class='text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600'>Dólar ou Euro</span>",
-    "hero-subtitle": "Não existe 'eu acho'. Existe o que aprova. Acesse o único método baseado em um <strong>banco de dados de 5 anos de entrevistas gravadas</strong> e auditáveis para QA, iOS, DevOps e Fullstack.",
+    "hero-subtitle": "Não existe \"eu acho\". Existe o que aprova. Acesse o único método baseado em um <strong>banco de dados de 5 anos de entrevistas gravadas</strong> e auditáveis para QA, iOS, DevOps e Fullstack.",
     "hero-cta-primary": "Quero Acessar o Treinamento",
     "hero-cta-secondary": "Ver as Provas",
     "section-problem-title": "Pare de Jogar o Jogo da Adivinhação.",
@@ -77,7 +77,7 @@ const translations = {
     "hero-title": "Your Code is Worth <br /><span class='text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600'>Dollar or Euro</span>",
     "hero-subtitle": "There is no 'I think'. There is what passes. Access the only method based on a <strong>5-year database of recorded interviews</strong> and auditable results for QA, iOS, DevOps, and Fullstack.",
     "hero-cta-primary": "Access the Training",
-    "hero-cta-secondary": "See the Evidence",
+    "hero-cta-secondary": "See the Proofs",
     "proof-title": "Auditable Results",
     "proof-subtitle": "These aren't just screenshots. These are transformed careers. <b>Skeptical? Click the testimonials and talk directly to the students.</b>",
     "proof-footer": "Data extracted from the <a href='https://docs.google.com/document/d/1n4Tpy6o1B6RlUC-2Aiv0McErMCKlPtuqHP5INCLCBKs/edit?usp=sharing' target='_blank' class='text-cyan-600 hover:text-cyan-400 underline'>public results document</a>",
@@ -144,12 +144,17 @@ if (mobileMenuButton && closeMobileMenuButton && mobileMenu) {
 // i18n Logic
 const getPreferredLanguage = () => {
   const urlParams = new URLSearchParams(window.location.search);
-  const langParam = urlParams.get('lang');
+  const langParam = urlParams.get('lang')?.toLowerCase();
+
+  const map = {
+    'pt': 'pt', 'br': 'pt',
+    'en': 'en', 'us': 'en', 'uk': 'en'
+  };
+
   if (langParam) {
     const baseLang = langParam.split('-')[0];
-    if (translations[baseLang]) {
-      return baseLang;
-    }
+    if (map[baseLang]) return map[baseLang];
+    if (translations[baseLang]) return baseLang;
   }
 
   const saved = localStorage.getItem('preferred-lang');
@@ -204,7 +209,7 @@ const updateContent = (lang) => {
 const setLanguage = (lang) => {
   currentLang = lang;
   localStorage.setItem('preferred-lang', lang);
-  
+
   // Update URL with lang parameter
   const url = new URL(window.location.href);
   url.searchParams.set('lang', lang);
