@@ -145,8 +145,11 @@ if (mobileMenuButton && closeMobileMenuButton && mobileMenu) {
 const getPreferredLanguage = () => {
   const urlParams = new URLSearchParams(window.location.search);
   const langParam = urlParams.get('lang');
-  if (langParam && translations[langParam]) {
-    return langParam;
+  if (langParam) {
+    const baseLang = langParam.split('-')[0];
+    if (translations[baseLang]) {
+      return baseLang;
+    }
   }
 
   const saved = localStorage.getItem('preferred-lang');
