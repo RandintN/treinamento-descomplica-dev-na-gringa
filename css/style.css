@@ -36,7 +36,12 @@ body {
   color: var(--color-text);
   line-height: 1.6;
   overflow-x: hidden;
-  /* Prevent horizontal scroll from effects */
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+body.loaded {
+  opacity: 1;
 }
 
 /* Utilities - Glassmorphism */
@@ -52,13 +57,29 @@ body {
   backdrop-filter: blur(10px);
   border: 1px solid var(--border-glass);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(56, 189, 248, 0.15) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.glass-card:hover::after {
+  opacity: 1;
 }
 
 .glass-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--color-primary);
-  box-shadow: 0 10px 40px -10px var(--color-primary-glow);
+  transform: translateY(-8px) scale(1.01);
+  border-color: rgba(56, 189, 248, 0.5);
+  box-shadow: 0 20px 40px -15px rgba(56, 189, 248, 0.2);
 }
 
 /* Typography Overrides */
@@ -167,6 +188,65 @@ h6 {
   will-change: transform;
 }
 
-#mobile-menu.open {
-  transform: translateX(0);
+/* Scroll Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Calculator Styles */
+.calc-input {
+  background-color: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(51, 65, 85, 1);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  color: white;
+  transition: border-color 0.2s;
+  width: 100%;
+}
+
+.calc-input:focus {
+  outline: none;
+  border-color: #22d3ee;
+}
+
+.calc-result-box {
+  background-color: rgba(34, 211, 238, 0.1);
+  border: 1px solid rgba(34, 211, 238, 0.2);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+/* Floating Action Button */
+.fab {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 40;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fab.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Stats Counter */
+.counter-val {
+  background: linear-gradient(to bottom, #fff, var(--color-primary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

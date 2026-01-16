@@ -62,7 +62,18 @@ const translations = {
     "footer-youtube": "Canal Youtube",
     "footer-linkedin": "LinkedIn",
     "footer-portfolio": "Portfólio",
-    "footer-newsletter": "Newsletter"
+    "footer-newsletter": "Newsletter",
+    "calc-title": "Calculadora de Arbitragem",
+    "calc-subtitle": "Quanto você está deixando na mesa por não trabalhar para a gringa?",
+    "calc-label-salary": "Salário Mensal Atual (BRL)",
+    "calc-label-usd": "USD Rate",
+    "calc-label-target": "Salário Alvo (USD)",
+    "calc-result-label": "Potencial de Ganho Extra",
+    "calc-result-monthly": "A mais por mês (Bruto)",
+    "stat-hours": "Horas de Entrevistas",
+    "stat-offers": "Propostas Mapeadas",
+    "stat-countries": "Países Atuantes",
+    "stat-students": "Alunos em Transição"
   },
   en: {
     "meta-title": "Global DEV Playbook | International Career Training",
@@ -75,9 +86,20 @@ const translations = {
     "nav-cta": "Secure Spot",
     "hero-badge": "It's Not Luck. It's real data, evidence, and proof, auditable and replicable.",
     "hero-title": "Your Code is Worth <br /><span class='text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600'>Dollar or Euro</span>",
-    "hero-subtitle": "There is no 'I think'. There is what passes. Access the only method based on a <strong>5-year database of recorded interviews</strong> and auditable results for QA, iOS, DevOps, and Fullstack.",
+    "hero-subtitle": "There is no \"I think\". There is what passes. Access the only method based on a <strong>5-year database of recorded interviews</strong> and auditable results for QA, iOS, DevOps, and Fullstack.",
     "hero-cta-primary": "Access the Training",
     "hero-cta-secondary": "See the Proofs",
+    "calc-title": "Arbitrage Calculator",
+    "calc-subtitle": "How much are you leaving on the table by not working abroad?",
+    "calc-label-salary": "Current Monthly Salary (BRL)",
+    "calc-label-usd": "USD Rate",
+    "calc-label-target": "Target Salary (USD)",
+    "calc-result-label": "Extra Earning Potential",
+    "calc-result-monthly": "Extra per month (Gross)",
+    "stat-hours": "Hours of Real Recorded Interviews",
+    "stat-offers": "Mapped Offers",
+    "stat-countries": "Active Countries",
+    "stat-students": "Students in Transition",
     "proof-title": "Auditable Results",
     "proof-subtitle": "These aren't just screenshots. These are transformed careers. <b>Skeptical? Click the testimonials and talk directly to the students.</b>",
     "proof-footer": "Data extracted from the <a href='https://docs.google.com/document/d/1n4Tpy6o1B6RlUC-2Aiv0McErMCKlPtuqHP5INCLCBKs/edit?usp=sharing' target='_blank' class='text-cyan-600 hover:text-cyan-400 underline'>public results document</a>",
@@ -220,15 +242,92 @@ const setLanguage = (lang) => {
 
 // Initialize
 const init = () => {
+  document.body.classList.add('loaded');
   updateContent(currentLang);
 
-  // Use event delegation for language buttons to be more robust
+  // Scroll Reveal Observer
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        if (entry.target.querySelector('.counter-val')) {
+          startCounters(entry.target);
+        }
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  // Fab Visibility
+  const fab = document.getElementById('fab-cta');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 500) {
+      fab.classList.add('visible');
+    } else {
+      fab.classList.remove('visible');
+    }
+  });
+
+  // Glass Card Glow Effect
+  document.addEventListener('mousemove', (e) => {
+    document.querySelectorAll('.glass-card').forEach(card => {
+      const rect = card.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      card.style.setProperty('--x', `${x}%`);
+      card.style.setProperty('--y', `${y}%`);
+    });
+  });
+
+  // Arbitrage Calculator Logic
+  const calcInputs = ['current-salary', 'usd-rate', 'target-salary-usd'];
+  calcInputs.forEach(id => {
+    document.getElementById(id)?.addEventListener('input', calculateArbitrage);
+  });
+  calculateArbitrage();
+
+  // Delegation for language buttons
   document.addEventListener('click', (e) => {
     const btn = e.target.closest('.lang-btn');
     if (btn) {
       const lang = btn.getAttribute('data-lang');
       if (lang) setLanguage(lang);
     }
+  });
+};
+
+const calculateArbitrage = () => {
+  const current = parseFloat(document.getElementById('current-salary')?.value) || 0;
+  const rate = parseFloat(document.getElementById('usd-rate')?.value) || 0;
+  const targetUsd = parseFloat(document.getElementById('target-salary-usd')?.value) || 0;
+
+  const targetBrl = targetUsd * rate;
+  const diff = targetBrl - current;
+
+  const resultEl = document.getElementById('calc-result-value');
+  if (resultEl) {
+    resultEl.innerText = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', maximumFractionDigits: 0 }).format(diff > 0 ? diff : 0);
+  }
+};
+
+const startCounters = (parent) => {
+  parent.querySelectorAll('.counter-val').forEach(counter => {
+    const target = +counter.getAttribute('data-target');
+    const duration = 2000;
+    const increment = target / (duration / 16);
+    let current = 0;
+
+    const update = () => {
+      current += increment;
+      if (current < target) {
+        counter.innerText = Math.ceil(current) + '+';
+        requestAnimationFrame(update);
+      } else {
+        counter.innerText = target + '+';
+      }
+    };
+    update();
   });
 };
 

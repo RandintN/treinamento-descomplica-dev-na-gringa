@@ -180,6 +180,7 @@
 </head>
 
 <body class="antialiased selection:bg-cyan-500 selection:text-white">
+  <div id="loader-reveal"></div>
 
   <!-- Header Glass -->
   <header class="fixed w-full top-0 z-50 glass border-b border-white/10 transition-all duration-300 px-4 py-2">
@@ -254,7 +255,7 @@
 
   <main>
     <!-- Hero Section -->
-    <section id="home" class="relative pt-40 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+    <section id="home" class="relative pt-40 pb-20 md:pt-48 md:pb-32 overflow-hidden reveal">
       <!-- Background Effects -->
       <div
         class="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[100px] -z-10 animate-pulse">
@@ -268,7 +269,7 @@
             São dados, evidências e
             provas reais, auditáveis e replicáveis.</span>
         </div>
-        <h1 data-i18n="hero-title" class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
+        <h1 data-i18n="hero-title" class="text-5xl md:text-7xl font-black mb-6 leading-[1.1]">
           Seu Código Vale <br />
           <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">Dólar ou Euro</span>
         </h1>
@@ -291,7 +292,7 @@
     </section>
 
     <!-- Problem/Intro Section -->
-    <section class="py-20 relative">
+    <section class="py-20 relative reveal">
       <div class="container mx-auto px-6 max-w-4xl text-center">
         <h2 data-i18n="section-problem-title" class="text-3xl md:text-4xl font-bold mb-6">Pare de Jogar o Jogo da
           Adivinhação.</h2>
@@ -319,10 +320,10 @@
     </section>
 
     <!-- Methodology Grid -->
-    <section id="mentoria" class="py-24 bg-slate-900/50">
+    <section id="mentoria" class="py-24 bg-slate-900/50 reveal">
       <div class="container mx-auto px-6">
         <div class="text-center max-w-3xl mx-auto mb-16">
-          <h2 data-i18n="method-title" class="text-3xl md:text-5xl font-bold mb-4">Reconhecimento de Padrões</h2>
+          <h2 data-i18n="method-title" class="text-4xl md:text-6xl font-black mb-4">Reconhecimento de Padrões</h2>
           <p data-i18n="method-subtitle" class="text-slate-400 text-lg">Eu não ensino "dicas". Eu ensino padrões
             extraídos de centenas de horas de
             filmagens reais.</p>
@@ -365,8 +366,73 @@
       </div>
     </section>
 
+    <!-- Arbitrage Calculator -->
+    <section id="calculator" class="py-24 relative overflow-hidden reveal">
+      <div class="container mx-auto px-6">
+        <div class="glass-card max-w-4xl mx-auto p-8 md:p-12 rounded-3xl border border-cyan-500/20">
+          <div class="text-center mb-10">
+            <h2 data-i18n="calc-title" class="text-3xl md:text-5xl font-black mb-4">Calculadora de Arbitragem</h2>
+            <p data-i18n="calc-subtitle" class="text-slate-400">Quanto você está deixando na mesa por não trabalhar para
+              a gringa?</p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div class="space-y-6">
+              <div>
+                <label data-i18n="calc-label-salary" class="block text-sm font-bold text-slate-400 mb-2">Salário Mensal
+                  Atual (BRL)</label>
+                <input type="number" id="current-salary" class="calc-input" placeholder="Ex: 15000" value="15000">
+              </div>
+              <div class="grid grid-cols-2 gap-4">
+                <div>
+                  <label data-i18n="calc-label-usd" class="block text-sm font-bold text-slate-400 mb-2">USD Rate</label>
+                  <input type="number" id="usd-rate" class="calc-input" value="5.50" step="0.1">
+                </div>
+                <div>
+                  <label data-i18n="calc-label-target" class="block text-sm font-bold text-slate-400 mb-2">Salário Alvo
+                    (USD)</label>
+                  <input type="number" id="target-salary-usd" class="calc-input" value="6000" step="500">
+                </div>
+              </div>
+            </div>
+
+            <div class="calc-result-box">
+              <p data-i18n="calc-result-label" class="text-sm font-bold text-cyan-400 uppercase tracking-widest mb-2">
+                Potencial de Ganho Extra</p>
+              <div id="calc-result-value" class="text-4xl md:text-6xl font-black text-white mb-2">R$ 18.000</div>
+              <p data-i18n="calc-result-monthly" class="text-slate-400 text-sm">A mais por mês (Bruto)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 reveal">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div class="text-4xl md:text-5xl font-black counter-val mb-2" data-target="500">0+</div>
+            <p data-i18n="stat-hours" class="text-sm font-bold text-slate-500 uppercase">Horas de Entrevistas</p>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl md:text-5xl font-black counter-val mb-2" data-target="150">0</div>
+            <p data-i18n="stat-offers" class="text-sm font-bold text-slate-500 uppercase">Propostas Mapeadas</p>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl md:text-5xl font-black counter-val mb-2" data-target="28">0</div>
+            <p data-i18n="stat-countries" class="text-sm font-bold text-slate-500 uppercase">Países Atuantes</p>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl md:text-5xl font-black counter-val mb-2" data-target="1000">0</div>
+            <p data-i18n="stat-students" class="text-sm font-bold text-slate-500 uppercase">Alunos em Transição</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Real Results (Audit-able) -->
-    <section id="provas" class="py-20 relative overflow-hidden">
+    <section id="provas" class="py-20 relative overflow-hidden reveal">
       <div class="container mx-auto px-6 text-center">
         <h2 data-i18n="proof-title" class="text-3xl md:text-5xl font-bold mb-4">Aprovação Auditável</h2>
         <p data-i18n="proof-subtitle" class="text-slate-400 text-lg mb-12">Não são apenas prints. São carreiras
@@ -409,7 +475,7 @@
     </section>
 
     <!-- Mentor Section -->
-    <section id="mentor" class="py-24 relative overflow-hidden">
+    <section id="mentor" class="py-24 relative overflow-hidden reveal">
       <div class="container mx-auto px-6">
         <div class="flex flex-col lg:flex-row items-center gap-16">
           <!-- Video -->
@@ -454,7 +520,7 @@
     </section>
 
     <!-- Guarantee -->
-    <section class="py-20 bg-gradient-to-br from-slate-900 to-slate-800">
+    <section class="py-20 bg-gradient-to-br from-slate-900 to-slate-800 reveal">
       <div class="container mx-auto px-6 text-center">
         <div
           class="glass-card max-w-3xl mx-auto p-10 rounded-3xl border border-cyan-500/30 shadow-[0_0_50px_rgba(34,211,238,0.1)]">
@@ -472,7 +538,7 @@
     </section>
 
     <!-- FAQ -->
-    <section id="faq" class="py-24">
+    <section id="faq" class="py-24 reveal">
       <div class="container mx-auto px-6 max-w-3xl">
         <div class="text-center mb-16">
           <h2 data-i18n="faq-title" class="text-3xl md:text-5xl font-bold">Dúvidas Frequentes</h2>
@@ -609,6 +675,12 @@
       </div>
     </div>
   </footer>
+
+  <a href="https://pay.hotmart.com/G101388470S" id="fab-cta" data-i18n-href="cta-link" target="_blank"
+    class="fab btn-glow w-14 h-14 flex items-center justify-center shadow-2xl shadow-cyan-500/40 translate-y-20">
+    <span class="material-icons text-slate-900">shopping_cart</span>
+  </a>
+
   <script src="js/main.js" defer></script>
 </body>
 
