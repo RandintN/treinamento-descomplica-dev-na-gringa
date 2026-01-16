@@ -143,6 +143,12 @@ if (mobileMenuButton && closeMobileMenuButton && mobileMenu) {
 
 // i18n Logic
 const getPreferredLanguage = () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const langParam = urlParams.get('lang');
+  if (langParam && translations[langParam]) {
+    return langParam;
+  }
+
   const saved = localStorage.getItem('preferred-lang');
   if (saved) return saved;
   const browserLang = navigator.language.split('-')[0];
