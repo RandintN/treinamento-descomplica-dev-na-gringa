@@ -204,6 +204,12 @@ const updateContent = (lang) => {
 const setLanguage = (lang) => {
   currentLang = lang;
   localStorage.setItem('preferred-lang', lang);
+  
+  // Update URL with lang parameter
+  const url = new URL(window.location.href);
+  url.searchParams.set('lang', lang);
+  window.history.pushState({}, '', url);
+
   updateContent(lang);
 };
 
