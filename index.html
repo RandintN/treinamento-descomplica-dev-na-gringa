@@ -587,7 +587,7 @@
           </details>
           <details class="glass-card p-6 rounded-xl group cursor-pointer">
             <summary class="flex justify-between items-center font-bold text-lg text-white list-none">
-              <span data-i18n="faq-q4">A mentoria async é adequada para quem tem pouca experiência (estagiários ou
+              <span data-i18n="faq-q4">O treinamento async é adequado para quem tem pouca experiência (estagiários ou
                 juniores)?</span>
               <span class="material-icons transition-transform group-open:rotate-180 text-cyan-400">expand_more</span>
             </summary>
@@ -598,11 +598,12 @@
           </details>
           <details class="glass-card p-6 rounded-xl group cursor-pointer">
             <summary class="flex justify-between items-center font-bold text-lg text-white list-none">
-              <span data-i18n="faq-q5">Qual a diferença entre a "Mentoria Async" e o modelo tradicional "1-on-1"?</span>
+              <span data-i18n="faq-q5">Qual a diferença entre o "Treinamento Async" e o modelo tradicional
+                "1-on-1"?</span>
               <span class="material-icons transition-transform group-open:rotate-180 text-cyan-400">expand_more</span>
             </summary>
             <div data-i18n="faq-a5" class="mt-4 text-slate-400 leading-relaxed space-y-4">
-              <p>A Mentoria Async foca na eficiência e autonomia com suporte contínuo.</p>
+              <p>O Treinamento Async foca na eficiência e autonomia com suporte contínuo.</p>
               <p><strong>O que inclui:</strong> Suporte e direcionamento direto pelo WhatsApp pessoal do mentor, acesso
                 ao grupo de vagas e descontos exclusivos com professor nativo (EUA).</p>
               <p><strong>O que não inclui:</strong> Agenda síncrona/reuniões agendadas "one-on-one" (ex: chamadas de
@@ -675,9 +676,9 @@
       <p data-i18n="footer-rights" class="text-slate-500 mb-4">&copy; 2025 SIMPLE SOFTWARE LTDA. All rights reserved.
       </p>
       <div class="flex justify-center gap-6">
-        <a href="https://termos.robsoncassiano.software" data-i18n="footer-terms"
-          class="text-sm text-slate-600 hover:text-cyan-400">Termos de
-          Uso</a>
+        <button id="open-terms" data-i18n="footer-terms"
+          class="text-sm text-slate-600 hover:text-cyan-400 bg-transparent border-none cursor-pointer transition-colors">Termos
+          do Nosso Acordo</button>
         <a href="https://www.youtube.com/@RobsonCassianoSoftware?sub_confirmation=1" data-i18n="footer-youtube"
           target="_blank" class="text-sm text-slate-600 hover:text-cyan-400">Canal Youtube</a>
         <a href="https://www.linkedin.com/in/robsoncassiano-software/" data-i18n="footer-linkedin" target="_blank"
@@ -694,6 +695,122 @@
     class="fab btn-glow w-14 h-14 flex items-center justify-center shadow-2xl shadow-cyan-500/40 translate-y-20">
     <span class="material-icons text-slate-900">shopping_cart</span>
   </a>
+
+  <!-- Terms Modal -->
+  <div id="terms-modal" class="modal-overlay">
+    <div class="modal-container">
+      <button class="modal-close" id="close-terms" aria-label="Fechar">
+        <span class="material-icons">close</span>
+      </button>
+      <div class="terms-content">
+        <h2 data-i18n="terms-modal-title" class="text-2xl font-bold text-white mb-6">Termos e Condições de Treinamento
+          de
+          Carreira Internacional da
+          Simple Software LTDA</h2>
+
+        <div class="space-y-6">
+          <section>
+            <h3 data-i18n="terms-s1-title" class="text-lg font-bold text-cyan-400">1. Serviços</h3>
+            <p data-i18n="terms-s1-text">A Simple Software LTDA ("Mentor") oferece treinamento para programadores que
+              buscam carreiras
+              internacionais. Isso inclui estratégias de busca de emprego, desenvolvimento de habilidades, preparação
+              para entrevistas, negociação salarial e aulas de inglês.</p>
+          </section>
+
+          <section>
+            <h3 data-i18n="terms-s2-title" class="text-lg font-bold text-cyan-400">2. Objetivo</h3>
+            <p data-i18n="terms-s2-text">Ajudar você a conseguir um emprego como programador no exterior.</p>
+          </section>
+
+          <section>
+            <h3 data-i18n="terms-s3-title" class="text-lg font-bold text-cyan-400">3. Reembolso</h3>
+            <p data-i18n="terms-s3-text"><strong class="text-white">Garantia Incondicional</strong>: Se você não estiver
+              satisfeito, solicite o
+              reembolso por e-mail e devolvemos integralmente seu dinheiro, solicite no prazo de até 7 dias.</p>
+          </section>
+
+          <section>
+            <h3 data-i18n="terms-s4-title" class="text-lg font-bold text-cyan-400">4. Cancelamento</h3>
+            <p data-i18n="terms-s4-text">Você pode cancelar o treinamento a qualquer momento. Se tiver cumprido a
+              checklist
+              e não conseguiu a vaga,
+              solicite o reembolso integral.</p>
+          </section>
+
+          <section>
+            <h3 data-i18n="terms-s5-title" class="text-lg font-bold text-cyan-400">5. Confidencialidade</h3>
+            <p data-i18n="terms-s5-text">Suas informações serão mantidas em sigilo, exceto quando exigido por lei.</p>
+          </section>
+
+          <section>
+            <h3 data-i18n="terms-s6-title" class="text-lg font-bold text-cyan-400">6. Responsabilidades</h3>
+            <p data-i18n="terms-s6-text">Você precisa fornecer informações precisas e se comprometer com as tarefas do
+              treinamento. O sucesso depende
+              do seu esforço também.</p>
+          </section>
+
+          <section>
+            <h3 data-i18n="terms-s7-title" class="text-lg font-bold text-cyan-400">7. Limitação de Responsabilidade</h3>
+            <p data-i18n="terms-s7-text">Não garantimos resultados específicos ou a obtenção de um emprego, apenas temos
+              métodos comprovados de
+              colocar as probabilidades a seu favor durante todas as fases do processo seletivo e também não realizo as
+              entrevistas por você, no seu lugar, jamais.</p>
+          </section>
+
+          <section>
+            <h3 data-i18n="terms-s8-title" class="text-lg font-bold text-cyan-400">8. Privacidade</h3>
+            <p data-i18n="terms-s8-text">Coletamos apenas informações necessárias para fornecer o serviço. Não
+              compartilhamos seus dados pessoais,
+              exceto quando exigido por lei. Você pode recusar o fornecimento de informações, mas isso pode limitar o
+              acesso a alguns serviços.</p>
+          </section>
+
+          <section>
+            <h3 data-i18n="terms-s9-title" class="text-lg font-bold text-cyan-400">9. Alterações</h3>
+            <p data-i18n="terms-s9-text">Podemos revisar estes termos a qualquer momento, com aviso prévio.</p>
+          </section>
+
+          <section>
+            <h3 data-i18n="terms-s10-title" class="text-lg font-bold text-cyan-400">10. Lei e Jurisdição</h3>
+            <p data-i18n="terms-s10-text">Estes termos são regidos pelas leis de São Paulo, Brasil.</p>
+          </section>
+
+          <section>
+            <h3 data-i18n="terms-s11-title" class="text-lg font-bold text-cyan-400">11. Compromisso do Usuário</h3>
+            <ul class="list-disc pl-5 space-y-2">
+              <li data-i18n="terms-s11-item1">Usar o conteúdo de forma adequada.</li>
+              <li data-i18n="terms-s11-item2">Não se envolver em atividades ilegais ou prejudiciais.</li>
+              <li data-i18n="terms-s11-item3">Não causar danos aos sistemas da Simple Software LTDA ou de terceiros.
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h3 data-i18n="terms-s12-title" class="text-lg font-bold text-cyan-400">12. Uso de Imagem e Voz</h3>
+            <p data-i18n="terms-s12-text">Ao participar dos treinamentos, você autoriza por prazo indeterminado a Simple
+              Software LTDA a gravar sua
+              imagem e voz durante as aulas. Este material poderá ser utilizado para fins educacionais e promocionais,
+              incluindo a criação de novos conteúdos e materiais de divulgação.</p>
+            <p data-i18n="terms-s12-notice"><strong class="text-white">Caso você não concorde com o uso de sua imagem e
+                voz, por favor, informe a
+                Simple Software LTDA por e-mail antes do início dos treinamentos.</strong></p>
+          </section>
+
+          <div class="pt-6 border-t border-slate-700">
+            <p data-i18n="terms-footer-questions" class="font-bold text-white mb-2">Dúvidas? Entre em contato conosco!
+            </p>
+            <p data-i18n="terms-footer-confirm" class="text-sm">Ao aceitar estes termos, você confirma que leu, entendeu
+              e concorda com todas as
+              condições.</p>
+
+            <a href="https://pay.hotmart.com/G101388470S?off=en_US&bid=1768751135366" target="_blank"
+              data-i18n="terms-cta" class="terms-cta mt-6">Parece justo, vamos lá!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <script src="js/main.js" defer></script>
 </body>

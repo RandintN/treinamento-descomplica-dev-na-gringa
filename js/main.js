@@ -38,16 +38,16 @@ const translations = {
     "guarantee-text": "Você tem 7 dias de garantia incondicional. Se não gostar, eu devolvo 100% do seu dinheiro. Sem perguntas.",
     "guarantee-cta": "Garantir minha vaga com segurança",
     "faq-title": "Dúvidas Frequentes",
-    "faq-q1": "Para quem é a mentoria?",
+    "faq-q1": "Para quem é o treinamento?",
     "faq-a1": "Focada em profissionais de TI (Devs, QAs, Data) que já tem experiência técnica (Sênior/Pleno) e querem migrar para o mercado internacional.",
     "faq-q2": "Preciso ser fluente em inglês?",
     "faq-a2": "Não. Você precisa de inglês técnico e estratégico para entrevistas. O método inclui módulos específicos para destravagem rápida da fala necessária.",
     "faq-q3": "Como funciona o pagamento?",
     "faq-a3": "Pagamento seguro via Hotmart. Aceitamos Pix, Boleto e Cartão de Crédito em até 12x.",
-    "faq-q4": "A mentoria async é adequada para quem tem pouca experiência (estagiários ou juniores)?",
+    "faq-q4": "O treinamento async é adequado para quem tem pouca experiência (estagiários ou juniores)?",
     "faq-a4": "Sim. O conteúdo é fundamentalista e atemporal, não dependendo de 'hypes' de mercado. O tempo atua a favor do iniciante: estudar e aplicar o método desde cedo facilita a disputa por vagas e acelera a maturação técnica necessária para posições globais.",
-    "faq-q5": "Qual a diferença entre a 'Mentoria Async' e o modelo tradicional '1-on-1'?",
-    "faq-a5": "<p>A Mentoria Async foca na eficiência e autonomia com suporte contínuo.</p><p><strong>O que inclui:</strong> Suporte e direcionamento direto pelo WhatsApp pessoal do mentor, acesso ao grupo de vagas e descontos exclusivos com professor nativo (EUA).</p><p><strong>O que não inclui:</strong> Agenda síncrona/reuniões agendadas 'one-on-one' (ex: chamadas de 1h).</p>",
+    "faq-q5": "Qual a diferença entre o 'Treinamento Async' e o modelo tradicional '1-on-1'?",
+    "faq-a5": "<p>O Treinamento Async foca na eficiência e autonomia com suporte contínuo.</p><p><strong>O que inclui:</strong> Suporte e direcionamento direto pelo WhatsApp pessoal do mentor, acesso ao grupo de vagas e descontos exclusivos com professor nativo (EUA).</p><p><strong>O que não inclui:</strong> Agenda síncrona/reuniões agendadas 'one-on-one' (ex: chamadas de 1h).</p>",
     "faq-q6": "O método funciona para quem busca vagas no Brasil?",
     "faq-a6": "Sim. Aplica-se o princípio lógico de 'quem pode o mais, pode o menos'. Ao se preparar para processos de alta complexidade (como Amazon e vagas internacionais), você estará superqualificado para a grande maioria das posições no mercado doméstico.",
     "faq-q7": "Sou de outra stack (Python, C#, etc.). O conteúdo é focado apenas em Java?",
@@ -58,7 +58,7 @@ const translations = {
     "faq-a9": "O acesso é vitalício. Isso garante que você receba todas as melhorias e atualizações futuras do treinamento, documentadas com base em novas evidências e provas reais do mercado.",
     "comments-title": "Comentários da Comunidade",
     "footer-rights": "&copy; 2025 SIMPLE SOFTWARE LTDA. Todos os direitos reservados.",
-    "footer-terms": "Termos de Uso",
+    "footer-terms": "Termos do Nosso Acordo",
     "footer-youtube": "Canal Youtube",
     "footer-linkedin": "LinkedIn",
     "footer-portfolio": "Portfólio",
@@ -73,7 +73,38 @@ const translations = {
     "stat-hours": "Horas de Entrevistas",
     "stat-offers": "Propostas Mapeadas",
     "stat-countries": "Países Atuantes",
-    "stat-students": "Alunos em Transição"
+    "stat-students": "Alunos em Transição",
+    "terms-modal-title": "Termos e Condições de Treinamento de Carreira Internacional da Simple Software LTDA",
+    "terms-s1-title": "1. Serviços",
+    "terms-s1-text": "A Simple Software LTDA (\"Mentor\") oferece treinamento para programadores que buscam carreiras internacionais. Isso inclui estratégias de busca de emprego, desenvolvimento de habilidades, preparação para entrevistas, negociação salarial e aulas de inglês.",
+    "terms-s2-title": "2. Objetivo",
+    "terms-s2-text": "Ajudar você a conseguir um emprego como programador no exterior.",
+    "terms-s3-title": "3. Reembolso",
+    "terms-s3-text": "<strong class='text-white'>Garantia Incondicional</strong>: Se você não estiver satisfeito, solicite o reembolso por e-mail e devolvemos integralmente seu dinheiro, solicite no prazo de até 7 dias.",
+    "terms-s4-title": "4. Cancelamento",
+    "terms-s4-text": "Você pode cancelar o treinamento a qualquer momento. Se tiver cumprido a checklist e não conseguiu a vaga, solicite o reembolso integral.",
+    "terms-s5-title": "5. Confidencialidade",
+    "terms-s5-text": "Suas informações serão mantidas em sigilo, exceto quando exigido por lei.",
+    "terms-s6-title": "6. Responsabilidades",
+    "terms-s6-text": "Você precisa fornecer informações precisas e se comprometer com as tarefas do treinamento. O sucesso depende do seu esforço também.",
+    "terms-s7-title": "7. Limitação de Responsabilidade",
+    "terms-s7-text": "Não garantimos resultados específicos ou a obtenção de um emprego, apenas temos métodos comprovados de colocar as probabilidades a seu favor durante todas as fases do processo seletivo e também não realizo as entrevistas por você, no seu lugar, jamais.",
+    "terms-s8-title": "8. Privacidade",
+    "terms-s8-text": "Coletamos apenas informações necessárias para fornecer o serviço. Não compartilhamos seus dados pessoais, exceto quando exigido por lei. Você pode recusar o fornecimento de informações, mas isso pode limitar o acesso a alguns serviços.",
+    "terms-s9-title": "9. Alterações",
+    "terms-s9-text": "Podemos revisar estes termos a qualquer momento, com aviso prévio.",
+    "terms-s10-title": "10. Lei e Jurisdição",
+    "terms-s10-text": "Estes termos são regidos pelas leis de São Paulo, Brasil.",
+    "terms-s11-title": "11. Compromisso do Usuário",
+    "terms-s11-item1": "Usar o conteúdo de forma adequada.",
+    "terms-s11-item2": "Não se envolver em atividades ilegais ou prejudiciais.",
+    "terms-s11-item3": "Não causar danos aos sistemas da Simple Software LTDA ou de terceiros.",
+    "terms-s12-title": "12. Uso de Imagem e Voz",
+    "terms-s12-text": "Ao participar dos treinamentos, você autoriza por prazo indeterminado a Simple Software LTDA a gravar sua imagem e voz durante as aulas. Este material poderá ser utilizado para fins educacionais e promocionais, incluindo a criação de novos conteúdos e materiais de divulgação.",
+    "terms-s12-notice": "<strong class='text-white'>Caso você não concorde com o uso de sua imagem e voz, por favor, informe a Simple Software LTDA por e-mail antes do início dos treinamentos.</strong>",
+    "terms-footer-questions": "Dúvidas? Entre em contato conosco!",
+    "terms-footer-confirm": "Ao aceitar estes termos, você confirma que leu, entendeu e concorda com todas as condições.",
+    "terms-cta": "Parece justo, vamos lá!"
   },
   en: {
     "meta-title": "Global DEV Playbook | International Career Training",
@@ -113,16 +144,16 @@ const translations = {
     "guarantee-text": "You have a 7-day unconditional guarantee. If you don't like it, I'll refund 100% of your money. No questions asked.",
     "guarantee-cta": "Secure my spot safely",
     "faq-title": "Frequently Asked Questions",
-    "faq-q1": "Who is the mentorship for?",
+    "faq-q1": "Who is the training for?",
     "faq-a1": "Focused on IT professionals (Devs, QAs, Data) who already have technical experience (Senior/Mid) and want to migrate to the international market.",
     "faq-q2": "Do I need to be fluent in English?",
     "faq-a2": "No. You need technical and strategic English for interviews. The method includes specific modules for quickly unlocking the necessary speaking skills.",
     "faq-q3": "How does payment work?",
     "faq-a3": "Secure payment via Hotmart. We accept Pix, Bank Slip, and Credit Card in up to 12 installments.",
-    "faq-q4": "Is the async mentorship suitable for those with little experience (interns or juniors)?",
+    "faq-q4": "Is the async training suitable for those with little experience (interns or juniors)?",
     "faq-a4": "Yes. The content is fundamentalist and timeless, not depending on market 'hypes'. Time works in favor of the beginner: studying and applying the method early makes it easier to compete for jobs and accelerates technical maturity.",
-    "faq-q5": "What is the difference between 'Async Mentorship' and the traditional '1-on-1' model?",
-    "faq-a5": "<p>Async Mentorship focuses on efficiency and autonomy with continuous support.</p><p><strong>What's included:</strong> Support and direct guidance via the mentor's personal WhatsApp, access to the job group, and exclusive discounts with a native teacher (USA).</p><p><strong>What's not included:</strong> Synchronous schedule/scheduled 'one-on-one' meetings (e.g., 1h calls).</p>",
+    "faq-q5": "What is the difference between 'Async Training' and the traditional '1-on-1' model?",
+    "faq-a5": "<p>Async Training focuses on efficiency and autonomy with continuous support.</p><p><strong>What's included:</strong> Support and direct guidance via the mentor's personal WhatsApp, access to the job group, and exclusive discounts with a native teacher (USA).</p><p><strong>What's not included:</strong> Synchronous schedule/scheduled 'one-on-one' meetings (e.g., 1h calls).</p>",
     "faq-q6": "Does the method work for those looking for jobs in Brazil?",
     "faq-a6": "Yes. The logical principle of 'he who can do more can do less' applies. By preparing for high-complexity processes (like Amazon and international jobs), you will be overqualified for most domestic positions.",
     "faq-q7": "I'm from another stack (Python, C#, etc.). Is the content focused only on Java?",
@@ -133,11 +164,42 @@ const translations = {
     "faq-a9": "Access is lifelong. This ensures you receive all future improvements and updates to the training, documented based on new evidence and real market proof.",
     "comments-title": "Community Comments",
     "footer-rights": "&copy; 2025 SIMPLE SOFTWARE LTDA. All rights reserved.",
-    "footer-terms": "Terms of Use",
+    "footer-terms": "Terms of Our Agreement",
     "footer-youtube": "YouTube Channel",
     "footer-linkedin": "LinkedIn",
     "footer-portfolio": "Portfolio",
-    "footer-newsletter": "Newsletter"
+    "footer-newsletter": "Newsletter",
+    "terms-modal-title": "International Career Training Terms and Conditions - Simple Software LTDA",
+    "terms-s1-title": "1. Services",
+    "terms-s1-text": "Simple Software LTDA (\"Mentor\") offers training for programmers seeking international careers. This includes job search strategies, skill development, interview preparation, salary negotiation, and English classes.",
+    "terms-s2-title": "2. Objective",
+    "terms-s2-text": "To help you secure a job as a programmer abroad.",
+    "terms-s3-title": "3. Refund",
+    "terms-s3-text": "<strong class='text-white'>Unconditional Guarantee</strong>: If you are not satisfied, request a refund by email and we will return your money in full, request it within 7 days.",
+    "terms-s4-title": "4. Cancellation",
+    "terms-s4-text": "You can cancel the training at any time. If you have completed the checklist and did not get the job, request a full refund.",
+    "terms-s5-title": "5. Confidentiality",
+    "terms-s5-text": "Your information will be kept confidential, except when required by law.",
+    "terms-s6-title": "6. Responsibilities",
+    "terms-s6-text": "You must provide accurate information and commit to the training tasks. Success also depends on your effort.",
+    "terms-s7-title": "7. Limitation of Liability",
+    "terms-s7-text": "We do not guarantee specific results or obtaining a job; we only have proven methods to put the odds in your favor during all phases of the selection process. I also do not perform interviews for you, in your place, ever.",
+    "terms-s8-title": "8. Privacy",
+    "terms-s8-text": "We only collect information necessary to provide the service. We do not share your personal data except when required by law. You can refuse to provide information, but this may limit access to some services.",
+    "terms-s9-title": "9. Changes",
+    "terms-s9-text": "We may revise these terms at any time, with prior notice.",
+    "terms-s10-title": "10. Law and Jurisdiction",
+    "terms-s10-text": "These terms are governed by the laws of São Paulo, Brazil.",
+    "terms-s11-title": "11. User Commitment",
+    "terms-s11-item1": "Use the content appropriately.",
+    "terms-s11-item2": "Do not engage in illegal or harmful activities.",
+    "terms-s11-item3": "Do not cause damage to Simple Software LTDA systems or third parties.",
+    "terms-s12-title": "12. Use of Image and Voice",
+    "terms-s12-text": "By participating in the training sessions, you authorize Simple Software LTDA indefinitely to record your image and voice during classes. This material may be used for educational and promotional purposes, including the creation of new content and marketing materials.",
+    "terms-s12-notice": "<strong class='text-white'>If you do not agree to the use of your image and voice, please inform Simple Software LTDA by email before the training begins.</strong>",
+    "terms-footer-questions": "Questions? Contact us!",
+    "terms-footer-confirm": "By accepting these terms, you confirm that you have read, understood, and agree to all conditions.",
+    "terms-cta": "Sounds fair, let's go!"
   }
 };
 
@@ -295,7 +357,33 @@ const init = () => {
       if (lang) setLanguage(lang);
     }
   });
+
+  // Terms Modal Logic
+  const openTermsBtn = document.getElementById('open-terms');
+  const closeTermsBtn = document.getElementById('close-terms');
+  const termsModal = document.getElementById('terms-modal');
+
+  if (openTermsBtn && closeTermsBtn && termsModal) {
+    openTermsBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      termsModal.classList.add('open');
+      document.body.style.overflow = 'hidden'; // Prevent scrolling
+    });
+
+    closeTermsBtn.addEventListener('click', () => {
+      termsModal.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+
+    termsModal.addEventListener('click', (e) => {
+      if (e.target === termsModal) {
+        termsModal.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    });
+  }
 };
+
 
 const calculateArbitrage = () => {
   const current = parseFloat(document.getElementById('current-salary')?.value) || 0;
